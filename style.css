@@ -77,6 +77,31 @@ select {
 html {
   font-size: 62.5%;
 }
+
+
+/* Prospective Students Page */
+
+.prospective-student-img {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+
+.page {
+  background-color: #FF9A4A;
+}
+
+.prospective-student-body {
+  width: 90%;
+  margin: auto;
+  margin-top: 7rem;
+}
+
+.prospective-student-h1 {
+  text-decoration: underline;
+  font-size: 4.5rem;
+}
+
 /* END Reset */
 /* 
   Put styles here 
