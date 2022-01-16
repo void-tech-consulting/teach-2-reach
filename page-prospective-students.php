@@ -73,9 +73,7 @@ require get_template_directory() . '/inc/section_vars.php';
 </div>
 
 <div class="page-half-2">
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+  <div class="prospective-student-body">
+    <h1 class="prospective-student-sif">Student Interest Form</h1>
+  </div>
 </div>
