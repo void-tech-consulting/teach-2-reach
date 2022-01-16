@@ -85,6 +85,8 @@ html {
 
 /* home css styles */
 
+/* Current Students start */
+
 html {
   font-size: 62.5%;
 }
@@ -109,7 +111,7 @@ html {
   width: 90%;
 }
 
-.side-by-side-header {
+.current-students-header {
   color: #FFFFFF;
   font-size: 4.8rem;
   line-height: 7.2rem;
@@ -143,3 +145,44 @@ html {
 .bold-text {
   font-weight: 700;
 }
+
+/* Student testimonials section */
+
+.student-testimonials-section {
+  background: #212121;
+}
+
+.current-students-testimonials-header {
+  color: #8C67DC;
+
+}
+
+.student-testimonials-container {
+  margin: auto;
+  width: 90%;
+}
+
+.student-testimonials-row {
+  margin-bottom: 6.6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.student-testimonials-entry {
+  width: 50%;
+}
+
+.student-testimonials-entry-text {
+  letter-spacing: -0.015em;
+  color: #FFFFFF;
+  font-size: 35px;
+  line-height: 30px;
+}
+
+.student-testimonials-entry-img {
+  width: 43.9rem;
+}
+
+/* Current Students End */
