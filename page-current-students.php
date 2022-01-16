@@ -20,9 +20,9 @@
 <!-- gray box -->
 <div class="side-by-side-section">
   <div class="side-by-side-container">
-  <div class="side-by-side-header">Current Students</div>
+  <div class="current-students-header">Current Students</div>
     <div class="side-by-side-content">
-      <img src="<?php echo get_template_directory_uri();?>/img/image 8.png" alt="" class="side-by-side-image">
+      <img src="<?php echo get_template_directory_uri();?>/imgs/image 8.png" alt="" class="side-by-side-image">
       <div class="side-by-side-text">
         <div class="bold-text">Join Our Family!</div>
         <div class="side-by-side-text-basic">
@@ -33,12 +33,90 @@
   </div>
 </div>
 
-<!-- Example with default video if $home_top_vid isn't set -->
-<!-- <iframe 
-  class="yt-vid" 
-  src="<?php echo get_theme_mod($home_top_vid, 'https://www.youtube.com/embed/A0Wyx-OOX4A'); ?>" 
-  frameborder="0" 
-  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-</iframe> -->
+<!-- Student Testimonials Black box -->
+<div class="student-testimonials-section">
+  <div class="student-testimonials-container">
+    <div class="current-students-header current-students-testimonials-header">Student Testimonials</div>
+
+    <div class="student-testimonials-row">
+
+      <div class="student-testimonials-entry">
+        <div class="student-testimonials-entry-header student-testimonials-entry-text">
+          Vanessa
+        </div>
+        <div class="student-testimonials-entry-text">
+          “We really are not just a school we’re a family.”
+        </div>
+      </div>
+
+      <div class="student-testimonials-entry student-testimonials-entry-img">
+        <img src="<?php echo get_template_directory_uri();?>/imgs/group pic 1.jpg" alt="">
+      </div>
+
+    </div>
+
+    <div class="student-testimonials-row">
+
+      <div class="student-testimonials-entry student-testimonials-entry-text">
+        <div>
+          Chauncey
+        </div>
+        <div>
+          “I always leave better than I came.”
+        </div>
+      </div>
+
+      <div class="student-testimonials-entry student-testimonials-entry-text">
+        <div class="student-testimonials-entry-header">
+          Garland
+        </div>
+        <div>
+        “We strive to uplift one another…and that’s special.”
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="student-testimonials-row">
+
+      <div class="student-testimonials-entry student-testimonials-entry-text">
+        <div class="student-testimonials-entry-header">
+          Andre
+        </div>
+        <div>
+          “Everybody just accepted me.”
+        </div>
+      </div>
+
+      <div class="student-testimonials-entry student-testimonials-entry-text">
+        <div class="student-testimonials-entry-header">
+          Trevor
+        </div>
+        <div>
+          “Not too many people have the bonds and support that we have.”
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="student-testimonials-row">
+
+      <div class="student-testimonials-entry student-testimonials-entry-img">
+        <img src="<?php echo get_template_directory_uri();?>/imgs/group pic 1.jpg" alt="">
+      </div>
+
+      <div class="student-testimonials-entry student-testimonials-entry-text">
+        <div class="student-testimonials-entry-header">
+          John
+        </div>
+        <div>
+          “I feel like it was God intervening when I found this school”…
+        </div>
+      </div>
+      
+    </div>
+
+  </div>
+</div>
 
 <?php get_footer(); ?>
