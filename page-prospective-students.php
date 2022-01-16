@@ -1,5 +1,6 @@
 <?php 
-  get_header(); 
+  get_header();
+  require get_template_directory() . '/inc/section_vars.php';
 ?>
 
 <h1>hi</h1>
