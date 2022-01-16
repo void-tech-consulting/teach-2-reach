@@ -1,6 +1,6 @@
-<?php 
-  get_header();
-  require get_template_directory() . '/inc/section_vars.php';
+<?php
+get_header();
+require get_template_directory() . '/inc/section_vars.php';
 ?>
 <!-- <h1>The Front Page</h1>
 
@@ -17,7 +17,7 @@
   </h4>
 <?php } ?> -->
 
-<!-- hi -->
+<p> hi justin</p>
 
 <!-- Example with default video if $home_top_vid isn't set -->
 <!-- <iframe 
