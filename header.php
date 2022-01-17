@@ -15,10 +15,12 @@
 
 <body>
   <div class="header-container">
-    <!-- Logo -->
-    <img id="logo" src="<?php echo get_template_directory_uri(); ?>/images/black-void.png" />
-
-    <!-- Navigation -->
+    <!-- Logo + Name -->
+    <div class="header-logo">
+      <img id="logo" src="<?php echo get_template_directory_uri(); ?>/images/black-void.png" />
+      <div>Teach 2 Reach</div>
+    </div>
+      <!-- Navigation -->
     <?php
     $args = array(
       "theme_location" => "primary",
