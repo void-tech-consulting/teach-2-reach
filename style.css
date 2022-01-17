@@ -186,3 +186,47 @@ html {
 }
 
 /* Current Students End */
+.about_us {
+   
+  background-color: #212121;
+  text-align: center; 
+  padding-bottom: 5rem; 
+ 
+   
+ 
+}
+.our_philosophy {
+  color: #FF9A4A;  
+  font-size: 5.5rem; 
+  font-weight: 700; 
+  font-family: Serif;  
+  text-align: center; 
+}
+
+.description {
+  color: #FFFFFF;
+  font-size: 25px; 
+  font-family: Playfair Display; 
+  font-weight: 400;
+  text-align: center; 
+  
+}
+
+.text {
+  padding-top: 42px; 
+  padding-left: 199px;
+  padding-right: 199px; 
+}
+
+.orange_text_one {
+  color: #FF9A4A; 
+}
+
+
+
+
+
+
+
+
+
