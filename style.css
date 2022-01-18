@@ -15,19 +15,31 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 /* START Reset */
 /* Box sizing rules */
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  font-family: 'Playfair Display', serif;
 }
 
+/* *{
+  background-color: #505050;
+  color: white;
+} */
+
+html{
+  font-size: 62.5%;
+}
 /* Remove default padding */
+
 ul[class],
 ol[class] {
   padding: 0;
 }
 
 /* Remove default margin */
+
 body,
 h1,
 h2,
@@ -46,27 +58,39 @@ dd {
 }
 
 /* Set core body defaults */
+
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
+  background: var(--background-main);
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
 }
+
 /* Remove list styles on ul, ol elements with a class attribute */
+
 ul[class],
 ol[class] {
   list-style: none;
 }
+
 /* A elements that don't have a class get default styles */
+
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
+
 /* Make images easier to work with */
+
 img {
   max-width: 100%;
   display: block;
 }
+
 /* Inherit fonts for inputs and buttons */
+
 input,
 button,
 textarea,
@@ -74,27 +98,133 @@ select {
   font: inherit;
 }
 
-html {
-  font-size: 62.5%;
-}
 /* END Reset */
-/* 
-  Put styles here 
-*/
 
+/*************************************
+  General styles 
+**************************************/
 
-/* home css styles */
-
-/* Current Students start */
-
-html {
-  font-size: 62.5%;
+:root {
+  --background-main: rgb(255, 255, 255);
+  --orange: #FF9A4A;
+  --black: #212121;
+  --dark-grey: #5E5C5C;
+  --light-grey: #D8D8D8;
+  --light-purple: #AF6FFF;
+  --dark-purple: #8C67DC;
+  --white: #FFFFFF;
+  --text-primary: #FF9A4A;
+  --text-secondary: #924e16;
+  --border: thin solid rgba(255, 255, 255, .15);
+  --shadow: 0 8px 40px 0 rgba(0,0,0, .15);
 }
 
-@font-face {
+/*************************************
+  Layout styles 
+**************************************/
+#page-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*************************************
+  Center content styles 
+**************************************/
+#page-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*************************************
+  Header styles 
+**************************************/
+.header-container {
+  width: 100%;
+  background-color: var(--black);
+  color: var(--text-primary);
+  /* padding: var(--padding); */
+  padding: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+  /* box-shadow: var(--shadow); */
+}
+
+.header-logo{
+  display:flex;
+  align-items: center;
+  /* font-weight: 600; */
+  font-size: 4.5rem;
+}
+
+.logo{
+  width: 10rem;
+  height: auto;
+}
+
+.nav > ul{
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+}
+
+.nav > ul > li{
+  padding-right: 3rem;
+}
+
+#logo {
+  height: 40px;
+  margin: 1rem 0;
+}
+
+.nav {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  font-size: 2rem;
+}
+
+.nav * {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.nav *:hover {
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.nav > li {
+  padding: .5rem 1rem;
+}
+
+.nav > li > a {
+  cursor: pointer;
+  font-weight: 600;
+  width: 100%;
+}
+
+/*************************************
+  Bottom panel styles 
+**************************************/
+#bottom-panel {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--padding);
+  /* border-top: var(--border); */
+}
+
+/* @font-face {
   font-family: "Playfair Display";
   src: url(Fonts/Mulish/Mulish-VariableFont_wght.ttf);
-}
+} */
 
 .side-by-side-section{
   background-color: #5E5C5C;
@@ -116,7 +246,7 @@ html {
   font-size: 4.8rem;
   line-height: 7.2rem;
   margin-bottom: 4.1rem;
-  font-family: "Playfair Display";
+  /* font-family: "Playfair Display"; */
 }
 
 .side-by-side-content {
@@ -135,7 +265,7 @@ html {
   line-height: 3.6rem;
   color: #FFFFFF;
   width: 45%;
-  font-family: Playfair Display;
+  /* font-family: Playfair Display; */
 }
 
 .side-by-side-text-basic {
@@ -199,7 +329,7 @@ html {
   color: #FF9A4A;  
   font-size: 5.5rem; 
   font-weight: 700; 
-  font-family: Serif;  
+  /* font-family: Serif;   */
   text-align: center; 
 }
 
