@@ -98,6 +98,54 @@ select {
   font: inherit;
 }
 
+/* Prospective Students Page */
+
+.page-half-1 {
+  background-color: #FF9A4A;
+}
+
+.page-half-2 {
+  background-color: #212121;
+}
+
+.prospective-student-img {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+
+.prospective-student-body {
+  width: 90%;
+  margin: auto;
+  margin-top: 7rem;
+}
+
+.prospective-student-title {
+  font-size: 4.5rem;
+  text-decoration: underline;
+}
+
+.prospective-student-h1 {
+  font-size: 3.3rem;
+}
+
+.prospective-student-h2 {
+  font-size: 2.4rem;
+}
+
+.prospective-student-p {
+  font-size: 2.4rem;
+}
+
+.prospective-student-sif {
+  font-size: 3.6rem;
+  color: #FF9A4A;
+}
+
+/* END Reset */
+/* 
+  Put styles here 
+*/
 /* END Reset */
 
 /*************************************
