@@ -280,6 +280,7 @@ select {
 
 .student-testimonials-section {
   background: #212121;
+  padding-bottom: 13rem;
 }
 
 .current-students-testimonials-header {
@@ -290,6 +291,7 @@ select {
 .student-testimonials-container {
   margin: auto;
   width: 90%;
+  margin-top: 5.5rem;
 }
 
 .student-testimonials-row {
@@ -297,6 +299,7 @@ select {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: 20rem;
 
 }
 
@@ -313,6 +316,22 @@ select {
 
 .student-testimonials-entry-img {
   width: 43.9rem;
+}
+
+.student-testimonials-entry-header {
+  line-height: 7.5rem;
+}
+
+/* .student-testimonial-offset-side {
+  padding-top: 10rem;
+} */
+
+.student-testimonials-entry-text.student-testimonial-offset-side {
+  padding-top: 10rem;
+}
+
+.student-testimonial-offset-side {
+  text-align: right;
 }
 
 /* Current Students End */
