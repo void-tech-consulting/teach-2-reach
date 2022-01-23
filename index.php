@@ -17,8 +17,6 @@ require get_template_directory() . '/inc/section_vars.php';
   </h4>
 <?php } ?> -->
 
-<p> hi justin</p>
-
 <!-- Example with default video if $home_top_vid isn't set -->
 <!-- <iframe 
   class="yt-vid" 

@@ -1,9 +1,8 @@
 <?php
 
-<<<<<<< HEAD
 function register_primary_menu()
 {
-  register_nav_menu('primary', 'Primary Menu');
+  register_nav_menu('primary', 'Navigation');
 }
 add_action('after_setup_theme', 'register_primary_menu');
 
@@ -128,7 +127,3 @@ function prospective_students_customizer($wp_customize)
   ));
 }
 add_action('customize_register', 'prospective_students_customizer');
-=======
-// Menu registration
-register_nav_menu("primary", "Navigation");
->>>>>>> origin/main
