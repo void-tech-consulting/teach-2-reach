@@ -1,5 +1,4 @@
 <?php
-<<<<<<< HEAD
   $home_section = 'home_section';
   $home_top_vid = 'top_vid';
   $home_top_img = 'home_top_img';
@@ -12,5 +11,3 @@
   $prospective_students_img = 'prospective_students_icon';
   $prospective_students_name = 'prospective_students_name';
 ?>
-=======
->>>>>>> origin/main
