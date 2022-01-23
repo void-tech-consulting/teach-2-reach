@@ -20,7 +20,7 @@
 <!-- gray box -->
 <div class="side-by-side-section">
   <div class="side-by-side-container">
-  <div class="current-students-header">Current Students</div>
+  <div class="current-students-header bold-text">Current Students</div>
     <div class="side-by-side-content">
       <img src="<?php echo get_template_directory_uri();?>/imgs/image 8.png" alt="" class="side-by-side-image">
       <div class="side-by-side-text">
@@ -36,7 +36,7 @@
 <!-- Student Testimonials Black box -->
 <div class="student-testimonials-section">
   <div class="student-testimonials-container">
-    <div class="current-students-header current-students-testimonials-header">Student Testimonials</div>
+    <div class="current-students-header current-students-testimonials-header bold-text">Student Testimonials</div>
 
     <div class="student-testimonials-row">
 
