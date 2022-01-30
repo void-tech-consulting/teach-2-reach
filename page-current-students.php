@@ -20,7 +20,7 @@
 <!-- gray box -->
 <div class="side-by-side-section">
   <div class="side-by-side-container">
-  <div class="current-students-header">Current Students</div>
+  <div class="current-students-header bold-text">Current Students</div>
     <div class="side-by-side-content">
       <img src="<?php echo get_template_directory_uri();?>/imgs/image 8.png" alt="" class="side-by-side-image">
       <div class="side-by-side-text">
@@ -36,12 +36,12 @@
 <!-- Student Testimonials Black box -->
 <div class="student-testimonials-section">
   <div class="student-testimonials-container">
-    <div class="current-students-header current-students-testimonials-header">Student Testimonials</div>
+    <div class="current-students-header current-students-testimonials-header bold-text">Student Testimonials</div>
 
     <div class="student-testimonials-row">
 
       <div class="student-testimonials-entry">
-        <div class="student-testimonials-entry-header student-testimonials-entry-text">
+        <div class="student-testimonials-entry-header student-testimonials-entry-text bold-text">
           Vanessa
         </div>
         <div class="student-testimonials-entry-text">
@@ -49,8 +49,8 @@
         </div>
       </div>
 
-      <div class="student-testimonials-entry student-testimonials-entry-img">
-        <img src="<?php echo get_template_directory_uri();?>/imgs/group pic 1.jpg" alt="">
+      <div class="student-testimonials-entry student-testimonials-entry-img student-testimonial-offset-side">
+        <img src="<?php echo get_template_directory_uri();?>/imgs/current_students_photo.jpg" alt="">
       </div>
 
     </div>
@@ -58,7 +58,7 @@
     <div class="student-testimonials-row">
 
       <div class="student-testimonials-entry student-testimonials-entry-text">
-        <div>
+        <div class="student-testimonials-entry-header bold-text">
           Chauncey
         </div>
         <div>
@@ -66,8 +66,8 @@
         </div>
       </div>
 
-      <div class="student-testimonials-entry student-testimonials-entry-text">
-        <div class="student-testimonials-entry-header">
+      <div class="student-testimonials-entry student-testimonials-entry-text student-testimonial-offset-side">
+        <div class="student-testimonials-entry-header bold-text">
           Garland
         </div>
         <div>
@@ -80,7 +80,7 @@
     <div class="student-testimonials-row">
 
       <div class="student-testimonials-entry student-testimonials-entry-text">
-        <div class="student-testimonials-entry-header">
+        <div class="student-testimonials-entry-header bold-text">
           Andre
         </div>
         <div>
@@ -88,8 +88,8 @@
         </div>
       </div>
 
-      <div class="student-testimonials-entry student-testimonials-entry-text">
-        <div class="student-testimonials-entry-header">
+      <div class="student-testimonials-entry student-testimonials-entry-text student-testimonial-offset-side">
+        <div class="student-testimonials-entry-header bold-text">
           Trevor
         </div>
         <div>
@@ -105,8 +105,8 @@
         <img src="<?php echo get_template_directory_uri();?>/imgs/group pic 1.jpg" alt="">
       </div>
 
-      <div class="student-testimonials-entry student-testimonials-entry-text">
-        <div class="student-testimonials-entry-header">
+      <div class="student-testimonials-entry student-testimonials-entry-text student-testimonial-offset-side">
+        <div class="student-testimonials-entry-header bold-text">
           John
         </div>
         <div>
