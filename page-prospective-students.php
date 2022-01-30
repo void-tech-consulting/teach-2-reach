@@ -75,5 +75,13 @@ require get_template_directory() . '/inc/section_vars.php';
 <div class="page-half-2">
   <div class="prospective-student-body">
     <h1 class="prospective-student-sif">Student Interest Form</h1>
+
+    <?php
+    $shortcode = get_theme_mod($prospective_students_form_shortcode);
+    echo do_shortcode($shortcode);
+    ?>
   </div>
 </div>
+</div>
+
+<?php get_footer(); ?>
