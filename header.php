@@ -15,18 +15,17 @@
   <?php wp_head(); ?>
 </head>
 
+<?php
+  $home_link = get_home_url();
+?>
+
 <body>
   <div class="header-container">
     <!-- Logo + Name -->
-    <?php
-      $home_link = get_home_url();
-    ?>
-    <div class="header-logo">
-      <a href='<?php echo $home_link; ?>' >
-        <img class="logo" src="<?php echo get_template_directory_uri(); ?>/imgs/logo.png" />
-        <div>Teach 2 Reach</div>
-      </a>
-    </div>
+    <a class="header-logo" href='<?php echo $home_link; ?>' >
+      <img class="logo" src="<?php echo get_template_directory_uri(); ?>/imgs/logo.png" />
+      <div>Teach 2 Reach</div>
+    </a>
       <!-- Navigation -->
     <?php
     $args = array(

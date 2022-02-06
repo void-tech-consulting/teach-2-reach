@@ -202,12 +202,19 @@ select {
   /* box-shadow: var(--shadow); */
 }
 
+.header-container > a{
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
 .header-logo{
   display:flex;
   align-items: center;
   /* font-weight: 600; */
   font-size: 4.5rem;
+
 }
+
 
 .logo{
   width: 10rem;
