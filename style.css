@@ -98,6 +98,54 @@ select {
   font: inherit;
 }
 
+/* Prospective Students Page */
+
+.page-half-1 {
+  background-color: #FF9A4A;
+}
+
+.page-half-2 {
+  background-color: #212121;
+}
+
+.prospective-student-img {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+
+.prospective-student-body {
+  width: 90%;
+  margin: auto;
+  margin-top: 7rem;
+}
+
+.prospective-student-title {
+  font-size: 4.5rem;
+  text-decoration: underline;
+}
+
+.prospective-student-h1 {
+  font-size: 3.3rem;
+}
+
+.prospective-student-h2 {
+  font-size: 2.4rem;
+}
+
+.prospective-student-p {
+  font-size: 2.4rem;
+}
+
+.prospective-student-sif {
+  font-size: 3.6rem;
+  color: #FF9A4A;
+}
+
+/* END Reset */
+/* 
+  Put styles here 
+*/
 /* END Reset */
 
 /*************************************
@@ -280,6 +328,7 @@ select {
 
 .student-testimonials-section {
   background: #212121;
+  padding-bottom: 13rem;
 }
 
 .current-students-testimonials-header {
@@ -290,6 +339,7 @@ select {
 .student-testimonials-container {
   margin: auto;
   width: 90%;
+  margin-top: 5.5rem;
 }
 
 .student-testimonials-row {
@@ -297,6 +347,7 @@ select {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: 20rem;
 
 }
 
@@ -315,6 +366,22 @@ select {
   width: 43.9rem;
 }
 
+.student-testimonials-entry-header {
+  line-height: 7.5rem;
+}
+
+/* .student-testimonial-offset-side {
+  padding-top: 10rem;
+} */
+
+.student-testimonials-entry-text.student-testimonial-offset-side {
+  padding-top: 10rem;
+}
+
+.student-testimonial-offset-side {
+  text-align: right;
+}
+
 /* Current Students End */
 .about_us {
    
@@ -328,6 +395,7 @@ select {
 .our_philosophy {
   color: #FF9A4A;  
   font-size: 5.5rem; 
+  font-weight: 700; 
   /* font-family: Serif;   */
   text-align: center; 
 }

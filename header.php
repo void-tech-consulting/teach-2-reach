@@ -9,7 +9,9 @@
   <!-- Icon CDN -->
   <script type="module" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule="" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"></script>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <?php wp_head(); ?>
 </head>
 
@@ -17,7 +19,7 @@
   <div class="header-container">
     <!-- Logo + Name -->
     <div class="header-logo">
-      <img id="logo" src="<?php echo get_template_directory_uri(); ?>/images/black-void.png" />
+      <img class="logo" src="<?php echo get_template_directory_uri(); ?>/imgs/logo.png" />
       <div>Teach 2 Reach</div>
     </div>
       <!-- Navigation -->
