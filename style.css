@@ -383,6 +383,62 @@ select {
 }
 
 /* Current Students End */
+
+/* News and Events Start */
+.news-events-container {
+  background-color: #212121;
+  font-size: 2.7rem;
+  line-height: 3.6rem;
+  padding-top: 11rem;
+  padding-bottom: 11rem;
+}
+
+.news-events-date {
+  font-size: 2.7rem;
+  line-height: 3.6rem;
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.news-events-event-name {
+  font-size: 3.5rem;
+  line-height: 4.6rem;
+}
+
+.news-events-entry {
+  width: 90%;
+  margin: auto;
+}
+
+.news-events-entry-subsection {
+  margin-top: 4rem;
+}
+
+.news-events-subheader {
+  font-style: italic;
+  font-weight: 700;
+}
+
+.news-events-white-text {
+  color: #FFFFFF;
+}
+
+.news-events-entry-note {
+  margin-top: 8rem;
+  font-size: 2.1rem;
+  line-height: 2.8rem;
+}
+
+.news-events-side-by-side {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.news-events-side-by-side-half {
+  width: 40%;
+}
+/* News and Events End */
 .about_us {
    
   background-color: #212121;
