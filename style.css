@@ -389,7 +389,6 @@ select {
   background-color: #212121;
   font-size: 2.7rem;
   line-height: 3.6rem;
-  padding-top: 11rem;
   padding-bottom: 11rem;
 }
 
@@ -408,6 +407,7 @@ select {
 .news-events-entry {
   width: 90%;
   margin: auto;
+  margin-top: 11rem;
 }
 
 .news-events-entry-subsection {
