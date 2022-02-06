@@ -47,9 +47,9 @@
 
 <div class = "goals" > 
 
-<img src="<?php echo get_template_directory_uri();?>/imgs/group photo.jpeg" alt="" class = "quotes_img">
+<img src="<?php echo get_template_directory_uri();?>/imgs/phipps.jpg" alt="" class = "quotes_img">
 <h1 class = "creative" > Be Creative <br> <br> <br> Learn New Skills <br> <br> <br> Treat Yourself <br> <br> <br> Make New Friends <h1> 
-<img src="<?php echo get_template_directory_uri();?>/imgs/group photo.jpeg" alt="" class = "quotes_img2">
+<img src="<?php echo get_template_directory_uri();?>/imgs/about us pic2.jpeg" alt="" class = "quotes_img2">
 
 
 </div> 
