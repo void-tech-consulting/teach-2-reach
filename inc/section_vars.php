@@ -10,4 +10,7 @@
   $prospective_students_section = 'prospective_students_section';
   $prospective_students_img = 'prospective_students_icon';
   $prospective_students_name = 'prospective_students_name';
+
+  $news_and_events_section = 'news_and_events_section'; 
+  $news_and_events_section_repeater = 'news_and_events_section_repeater'; 
 ?>
