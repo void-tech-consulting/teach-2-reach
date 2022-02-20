@@ -11,3 +11,6 @@
   $prospective_students_img = 'prospective_students_icon';
   $prospective_students_name = 'prospective_students_name';
   $prospective_students_form_shortcode = 'prospective_students_form_shortcode';
+
+  $photo_gallery_section = 'photo_gallery_section';
+  $photo_gallery_header_img = 'photo_gallery_header_img';

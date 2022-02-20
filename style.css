@@ -99,12 +99,25 @@ select {
 
 /* Prospective Students Page */
 
+.content-wrapper {
+  width: 100%;
+  max-width: var(--max-content-width);
+}
+
 .page-half-1 {
   background-color: #FF9A4A;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .page-half-2 {
   background-color: #212121;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .prospective-student-img {
@@ -144,7 +157,6 @@ select {
 }
 
 .prospective-student-interest-form {
-  width: 70%;
 }
 
 /* END Reset */
@@ -170,6 +182,7 @@ select {
   --text-secondary: #924e16;
   --border: thin solid rgba(255, 255, 255, .15);
   --shadow: 0 8px 40px 0 rgba(0,0,0, .15);
+  --max-content-width: 2000px;
 }
 
 /*************************************
