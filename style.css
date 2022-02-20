@@ -414,6 +414,11 @@ select {
 .news-events-event-name {
   font-size: 3.5rem;
   line-height: 4.6rem;
+  color: #FF9A4A;
+}
+
+.news-events-subheader {
+  color: #FF9A4A;
 }
 
 .news-events-entry {
