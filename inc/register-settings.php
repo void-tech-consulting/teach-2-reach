@@ -125,15 +125,62 @@ function prospective_students_customizer($wp_customize)
       'section' => $prospective_students_section
     )
   ));
-
-  // Shortcode for form
-  $wp_customize->add_setting($prospective_students_form_shortcode, array(
-    'default' => "[shortcode goes here]"
-  ));
-  $wp_customize->add_control($prospective_students_form_shortcode, array(
-    'label' => 'Student Interest form shortcode',
-    'section' => $prospective_students_section,
-    'type' => 'textarea'
-  ));
 }
 add_action('customize_register', 'prospective_students_customizer');
+
+
+function events_repeater($wp_customize) {
+  $wp_customize->add_section('event_repeater_section', array(
+    'title' => 'Event Section',
+  ));
+
+  $wp_customize->add_setting('event_repeater_setting', array(
+    'sanitize_callback' => 'onepress_sanitize_repeatable_data_field',
+    'transport' => 'refresh',
+  ));
+  $wp_customize->add_control(new Onepress_Customize_Repeatable_Control(
+    $wp_customize,
+    'event_repeater_setting',
+    array(
+      'label' => esc_html__('Event Repeater'),
+      'description' => 'This is the repeater where you can add and edit news and events',
+      'section' => 'event_repeater_section',
+      'live_title',
+      'live_title_id' => 'some_quote',
+      'title_format'  => esc_html__('[live_title]'), // [live_title]
+      'max_item'      => 10, // Maximum item can add
+      'limited_msg' 	=> wp_kses_post( __( 'Max items added' ) ),
+      'fields'    => array(
+          'event_title'  => array(
+              'title' => esc_html__('Event/News Title'),
+              'type'  =>'text',
+          ),
+          'event_date' => array(
+            'title' => esc_html__('Event/News Date'),
+            'type'  =>'textarea',
+          ),
+          'event_what' => array(
+            'title' => esc_html__('Event/News What Description'),
+            'type'  =>'textarea',
+          ),
+          'event_who' => array(
+            'title' => esc_html__('Event/News Who Description'),
+            'type'  =>'textarea',
+          ),
+          'event_why' => array(
+            'title' => esc_html__('Event/News Why Description'),
+            'type'  =>'textarea',
+          ),
+          'event_img' => array(
+            'title' => esc_html__('Event/News Image'),
+            'type'  =>'media',
+          ),
+          'event_note' => array(
+            'title' => esc_html__('Event/News Additional Note'),
+            'type'  =>'textarea',
+          ),
+      ),
+    )
+  ));
+}
+add_action('customize_register', 'events_repeater');
