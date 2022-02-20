@@ -125,6 +125,16 @@ function prospective_students_customizer($wp_customize)
       'section' => $prospective_students_section
     )
   ));
+
+  // Shortcode for form
+  $wp_customize->add_setting($prospective_students_form_shortcode, array(
+    'default' => "[shortcode goes here]"
+  ));
+  $wp_customize->add_control($prospective_students_form_shortcode, array(
+    'label' => 'Student Interest form shortcode',
+    'section' => $prospective_students_section,
+    'type' => 'textarea'
+  ));
 }
 add_action('customize_register', 'prospective_students_customizer');
 
