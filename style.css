@@ -64,7 +64,6 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   background: var(--background-main);
-  color: var(--text-primary);
   display: flex;
   flex-direction: column;
 }
@@ -110,14 +109,16 @@ select {
 
 .prospective-student-img {
   display: flex;
+  object-fit: cover;
   width: 100%;
-  height: auto;
+  height: 527px;
 }
 
 .prospective-student-body {
   width: 90%;
   margin: auto;
   margin-top: 7rem;
+  color: #000000;
 }
 
 .prospective-student-title {
@@ -140,6 +141,10 @@ select {
 .prospective-student-sif {
   font-size: 3.6rem;
   color: #FF9A4A;
+}
+
+.prospective-student-interest-form {
+  width: 70%;
 }
 
 /* END Reset */

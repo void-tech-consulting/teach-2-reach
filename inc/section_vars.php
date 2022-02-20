@@ -10,4 +10,4 @@
   $prospective_students_section = 'prospective_students_section';
   $prospective_students_img = 'prospective_students_icon';
   $prospective_students_name = 'prospective_students_name';
-?>
+  $prospective_students_form_shortcode = 'prospective_students_form_shortcode';
