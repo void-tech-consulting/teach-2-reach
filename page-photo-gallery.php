@@ -3,10 +3,6 @@ get_header();
 require get_template_directory() . '/inc/section_vars.php';
 ?>
 
-<div class="page-half-2">
-    <p>hi hi hi</p>
-</div>
-
-
+<p>Hi what's happening here</p>
 
 <?php get_footer(); ?>
