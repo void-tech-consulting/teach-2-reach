@@ -478,14 +478,14 @@ a:not([footer-list]){
 }
 
 .news-events-date {
-  font-size: 2.7rem;
+  font-size: 2.6rem;
   line-height: 3.6rem;
   color: #FFFFFF;
   font-weight: 700;
 }
 
 .news-events-event-name {
-  font-size: 3.5rem;
+  font-size: 3.2rem;
   line-height: 4.6rem;
   color: #FF9A4A;
 }
@@ -502,6 +502,7 @@ a:not([footer-list]){
 
 .news-events-entry-subsection {
   margin-top: 4rem;
+  font-size: 2.7rem;
 }
 
 .news-events-subheader {
@@ -511,6 +512,7 @@ a:not([footer-list]){
 
 .news-events-white-text {
   color: #FFFFFF;
+  white-space: pre-line;
 }
 
 .news-events-entry-note {
@@ -522,11 +524,18 @@ a:not([footer-list]){
 .news-events-side-by-side {
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
-.news-events-side-by-side-half {
+.news-events-side-by-side-half-1 {
   width: 40%;
+}
+
+.news-events-side-by-side-half-2 {
+  object-fit: contain;
+  width: 40%;
+  height: auto;
 }
 /* News and Events End */
 .about_us {
@@ -534,9 +543,6 @@ a:not([footer-list]){
   background-color: #212121;
   text-align: center; 
   padding-bottom: 5rem; 
- 
-   
- 
 }
 .our_philosophy {
   color: #FF9A4A;  
