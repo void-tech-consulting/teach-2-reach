@@ -64,7 +64,6 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   background: var(--background-main);
-  color: var(--text-primary);
   display: flex;
   flex-direction: column;
 }
@@ -100,24 +99,39 @@ select {
 
 /* Prospective Students Page */
 
+.content-wrapper {
+  width: 100%;
+  max-width: var(--max-content-width);
+}
+
 .page-half-1 {
   background-color: #FF9A4A;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .page-half-2 {
   background-color: #212121;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .prospective-student-img {
   display: flex;
+  object-fit: cover;
   width: 100%;
-  height: auto;
+  height: 527px;
 }
 
 .prospective-student-body {
   width: 90%;
   margin: auto;
   margin-top: 7rem;
+  color: #000000;
 }
 
 .prospective-student-title {
@@ -140,6 +154,9 @@ select {
 .prospective-student-sif {
   font-size: 3.6rem;
   color: #FF9A4A;
+}
+
+.prospective-student-interest-form {
 }
 
 /* END Reset */
@@ -165,6 +182,7 @@ select {
   --text-secondary: #924e16;
   --border: thin solid rgba(255, 255, 255, .15);
   --shadow: 0 8px 40px 0 rgba(0,0,0, .15);
+  --max-content-width: 2000px;
 }
 
 /*************************************
@@ -450,6 +468,67 @@ a:not([footer-list]){
 }
 
 /* Current Students End */
+
+/* News and Events Start */
+.news-events-container {
+  background-color: #212121;
+  font-size: 2.7rem;
+  line-height: 3.6rem;
+  padding-bottom: 11rem;
+}
+
+.news-events-date {
+  font-size: 2.7rem;
+  line-height: 3.6rem;
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.news-events-event-name {
+  font-size: 3.5rem;
+  line-height: 4.6rem;
+  color: #FF9A4A;
+}
+
+.news-events-subheader {
+  color: #FF9A4A;
+}
+
+.news-events-entry {
+  width: 90%;
+  margin: auto;
+  margin-top: 11rem;
+}
+
+.news-events-entry-subsection {
+  margin-top: 4rem;
+}
+
+.news-events-subheader {
+  font-style: italic;
+  font-weight: 700;
+}
+
+.news-events-white-text {
+  color: #FFFFFF;
+}
+
+.news-events-entry-note {
+  margin-top: 8rem;
+  font-size: 2.1rem;
+  line-height: 2.8rem;
+}
+
+.news-events-side-by-side {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.news-events-side-by-side-half {
+  width: 40%;
+}
+/* News and Events End */
 .about_us {
    
   background-color: #212121;
@@ -563,14 +642,19 @@ a:not([footer-list]){
 
 
 
+
 .welcome {
  
   color: white; 
   position: relative; 
-
 }
 
-
+.collage-photo{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  
+}
 
 .welcome-text {
   text-align: center; 
@@ -601,19 +685,21 @@ a:not([footer-list]){
 }
 
 
-.volunteer {
+.middle-picture {
+  max-width: 100%;
+  display: block;
   width: 32rem;
-  height: auto;
+  height: 24rem;
 }
 
-.student {
+/* .student {
   width: 32rem;
   height: auto;
 }
 .donate {
   width: 32rem;
   height: auto;
-}
+} */
 
 .words {
   padding-top: 5rem;
