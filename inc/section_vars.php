@@ -4,6 +4,19 @@
   $home_top_img = 'home_top_img';
   $home_top_desc = 'home_top_desc';
 
+  $index_panel = 'index_panel';
+  $index_top_section = 'index_top_section';
+  $index_middle_section = 'index_middle_section';
+  $index_bottom_section = 'index_bottom_section';
+  $index_welcome_header = 'index_welcome_header';
+  $index_welcome_text = 'index_welcome_text';
+  $index_middle_picture1 = 'index_middle_picture1';
+  $index_middle_picture2 = 'index_middle_picture2';
+  $index_middle_picture3 = 'index_middle_picture3';
+  $index_video = 'index_video';
+  $index_bottom_text = 'index_bottom_text';
+
+  
   $example_section = 'example_section';
   $example_repeater = 'example_repeater';
 

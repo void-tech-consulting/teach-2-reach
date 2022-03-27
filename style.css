@@ -581,14 +581,19 @@ select {
 
 
 
+
 .welcome {
  
   color: white; 
   position: relative; 
-
 }
 
-
+.collage-photo{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  
+}
 
 .welcome-text {
   text-align: center; 
@@ -619,19 +624,21 @@ select {
 }
 
 
-.volunteer {
+.middle-picture {
+  max-width: 100%;
+  display: block;
   width: 32rem;
-  height: auto;
+  height: 24rem;
 }
 
-.student {
+/* .student {
   width: 32rem;
   height: auto;
 }
 .donate {
   width: 32rem;
   height: auto;
-}
+} */
 
 .words {
   padding-top: 5rem;
