@@ -272,14 +272,16 @@ select {
   Bottom panel styles 
 **************************************/
 .footer-bottom-panel {
-  height: 100px;
+  height: auto;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   padding: 0 var(--padding);
-  margin-left: 2rem;
-  margin-right: 8rem;
+  margin-left: 8rem;
+  margin-right: 35rem;
+  margin-top: 3rem;
+ 
   /* border-top: var(--border); */
 }
 
@@ -287,15 +289,34 @@ select {
   /* padding-right: 2rem; */
 }
 
+.footer-bottom-single{
+  max-width: 20rem;
+}
+
 .footer-body{
   background-color: var(--dark-grey);
   display: flex;
+  font-size: 1.8rem;
   flex-direction: row;
   padding: 2rem;
-  padding-right: 25rem;
+  padding-left: 5rem;
+  /* padding-right: 18rem; */
+  padding-bottom: 5rem;
   color: var(--white);
 }
 
+.footer-list{
+  text-decoration: none;
+  list-style-type: none;
+}
+.footer-list > li{
+  margin-bottom: 1rem;
+}
+a:not([footer-list]){
+  color:white;
+}
+/* a.footer-list{
+} */
 .footer-white{
   white-space: pre-line;
 }
@@ -304,13 +325,13 @@ select {
 }
 .footer-big-name{
   color: var(--white);
-  font-size: 2rem;
+  font-size: 2.3rem;
   margin-bottom: 2rem;
 }
 
 .footer-orange{
   color: var(--orange);
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
 }
 

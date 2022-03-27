@@ -50,7 +50,4 @@ src="https://www.youtube.com/embed/dSkt8Brso5w">
 </div>
 
 
-
-
-
 <?php get_footer(); ?>
