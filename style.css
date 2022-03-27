@@ -190,6 +190,11 @@ select {
 /*************************************
   Header styles 
 **************************************/
+.header-picture{
+  /* opacity: 1; */
+  /* filter: brightness(20%); */
+}
+
 .header-container {
   width: 100%;
   background-color: var(--black);
@@ -266,15 +271,49 @@ select {
 /*************************************
   Bottom panel styles 
 **************************************/
-#bottom-panel {
+.footer-bottom-panel {
   height: 100px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 var(--padding);
+  margin-left: 2rem;
+  margin-right: 8rem;
   /* border-top: var(--border); */
 }
+
+.footer-first-section{
+  /* padding-right: 2rem; */
+}
+
+.footer-body{
+  background-color: var(--dark-grey);
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  padding-right: 25rem;
+  color: var(--white);
+}
+
+.footer-white{
+  white-space: pre-line;
+}
+.footer-white2{
+  width: 15rem;
+}
+.footer-big-name{
+  color: var(--white);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-orange{
+  color: var(--orange);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
 
 /* @font-face {
   font-family: "Playfair Display";
@@ -402,6 +441,7 @@ select {
 .our_philosophy {
   color: #FF9A4A;  
   font-size: 5.5rem; 
+  margin-top: 4.2rem;
   font-weight: 700; 
   /* font-family: Serif;   */
   text-align: center; 

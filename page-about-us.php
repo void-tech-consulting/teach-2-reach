@@ -3,7 +3,9 @@
   require get_template_directory() . '/inc/section_vars.php';
 ?>
 
-
+<div class="header-picture">
+  <img src="<?php echo get_template_directory_uri();?>/imgs/about-us-header-picture.png" alt="">
+</div>
 <div class="about_us">
   <h1 class = "our_philosophy" > Our Philosophy </h1>
 
