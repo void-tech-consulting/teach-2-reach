@@ -59,7 +59,4 @@ require get_template_directory() . '/inc/section_vars.php';
 </div>
 
 
-
-
-
 <?php get_footer(); ?>

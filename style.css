@@ -208,6 +208,11 @@ select {
 /*************************************
   Header styles 
 **************************************/
+.header-picture{
+  /* opacity: 1; */
+  /* filter: brightness(20%); */
+}
+
 .header-container {
   width: 100%;
   background-color: var(--black);
@@ -284,15 +289,70 @@ select {
 /*************************************
   Bottom panel styles 
 **************************************/
-#bottom-panel {
-  height: 100px;
+.footer-bottom-panel {
+  height: auto;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   padding: 0 var(--padding);
+  margin-left: 8rem;
+  margin-right: 35rem;
+  margin-top: 3rem;
+ 
   /* border-top: var(--border); */
 }
+
+.footer-first-section{
+  /* padding-right: 2rem; */
+}
+
+.footer-bottom-single{
+  max-width: 20rem;
+}
+
+.footer-body{
+  background-color: var(--dark-grey);
+  display: flex;
+  font-size: 1.8rem;
+  flex-direction: row;
+  padding: 2rem;
+  padding-left: 5rem;
+  /* padding-right: 18rem; */
+  padding-bottom: 5rem;
+  color: var(--white);
+}
+
+.footer-list{
+  text-decoration: none;
+  list-style-type: none;
+}
+.footer-list > li{
+  margin-bottom: 1rem;
+}
+a:not([footer-list]){
+  color:white;
+}
+/* a.footer-list{
+} */
+.footer-white{
+  white-space: pre-line;
+}
+.footer-white2{
+  width: 15rem;
+}
+.footer-big-name{
+  color: var(--white);
+  font-size: 2.3rem;
+  margin-bottom: 2rem;
+}
+
+.footer-orange{
+  color: var(--orange);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
 
 /* @font-face {
   font-family: "Playfair Display";
@@ -481,6 +541,7 @@ select {
 .our_philosophy {
   color: #FF9A4A;  
   font-size: 5.5rem; 
+  margin-top: 4.2rem;
   font-weight: 700; 
   /* font-family: Serif;   */
   text-align: center; 
