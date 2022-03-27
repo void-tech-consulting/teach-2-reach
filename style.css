@@ -208,9 +208,25 @@ select {
 /*************************************
   Header styles 
 **************************************/
+.header-section{
+  position: relative;
+  text-align: center;
+}
 .header-picture{
+  /* position: absolute; */
   /* opacity: 1; */
-  /* filter: brightness(20%); */
+  filter: brightness(50%);
+}
+
+.header-text{
+  position: absolute;
+  color:white;
+  top: 50%;
+  left: 50%;
+  margin-top: -2rem;
+  transform: translate(-50%, -50%);
+  font-size: 6rem;
+  font-weight: bolder;
 }
 
 .header-container {
