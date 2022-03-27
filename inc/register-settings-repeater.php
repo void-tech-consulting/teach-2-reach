@@ -138,6 +138,7 @@ function events_repeater($wp_customize) {
     'sanitize_callback' => 'onepress_sanitize_repeatable_data_field',
     'transport' => 'refresh',
   ));
+
   $wp_customize->add_control(new Onepress_Customize_Repeatable_Control(
     $wp_customize,
     'event_repeater_setting',
@@ -154,14 +155,16 @@ function events_repeater($wp_customize) {
           'event_title'  => array(
               'title' => esc_html__('Event/News Title'),
               'type'  =>'text',
+              'default' => ''
           ),
           'event_date' => array(
             'title' => esc_html__('Event/News Date'),
             'type'  =>'textarea',
+            'default' => 'Month, Day, Year'
           ),
           'event_what' => array(
             'title' => esc_html__('Event/News What Description'),
-            'type'  =>'textarea',
+            'type'  =>'textarea'
           ),
           'event_who' => array(
             'title' => esc_html__('Event/News Who Description'),
