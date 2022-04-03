@@ -2,20 +2,6 @@
 get_header();
 require get_template_directory() . '/inc/section_vars.php';
 ?>
-<!-- <h1>The Front Page</h1>
-
-<?php if (get_theme_mod($home_top_img)) { ?>
-  <img 
-    src="<?php echo get_theme_mod($home_top_img) ?>" 
-    alt=""
-  >
-<?php } ?>
-
-<?php if (get_theme_mod($home_top_desc)) { ?>
-  <h4>
-    <?php echo get_theme_mod($home_top_desc) ?>
-  </h4>
-<?php } ?> -->
 
 <div class="news-events-container">
   <?php
