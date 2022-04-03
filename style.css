@@ -687,6 +687,9 @@ a:not([footer-list]){
   right: 33%; 
   left: 33%; 
   position: absolute; 
+  border-color: var(--light-purple);
+  border-width: 2px;
+  border-style: solid;
   padding-bottom: 5rem;
 }
 
