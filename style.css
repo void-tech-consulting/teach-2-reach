@@ -448,7 +448,7 @@ a:not([footer-list]){
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 20rem;
+  /* height: 20rem; */
 
 }
 
@@ -464,7 +464,10 @@ a:not([footer-list]){
 }
 
 .student-testimonials-entry-img {
-  width: 43.9rem;
+  /* width: 43.9rem; */
+  object-fit: contain;
+  width: 50%;
+  height: auto;
 }
 
 .student-testimonials-entry-header {
