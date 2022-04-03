@@ -585,7 +585,10 @@ a:not([footer-list]) {
   flex-direction: row;
   justify-content: space-between;
 
+  width: 90%;
+
   margin-left: 8rem;
+  margin-bottom: 6rem;
 }
 
 .careers-orange-row-half-1 {
@@ -596,8 +599,10 @@ a:not([footer-list]) {
 }
 
 .careers-orange-row-half-2 {
+  display: flex;
+  flex-direction: column;
   object-fit: contain;
-  width: 50%;
+  width: 40%;
   height: auto;
 }
 

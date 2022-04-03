@@ -21,6 +21,9 @@ require get_template_directory() . '/inc/section_vars.php';
                 <li>another something</li>
             </ul>
 
+            <br>
+            <br>
+
             <p class="careers-orange-subheading">How do I apply?</p>
             <br>
             <p>Email all necessary documents and identification to teach2reachinc@aol.com.</p>

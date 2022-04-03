@@ -263,36 +263,17 @@ function careers_repeatable_customizer($wp_customize)
     'title' => 'Careers',
   ));
 
-  $wp_customize->add_setting(
-    $careers_repeater,
-    array(
-      'sanitize_callback' => 'onepress_sanitize_repeatable_data_field',
-      'transport' => 'refresh',
-    )
-  );
-
-  $wp_customize->add_setting($careers_top_image, array(
-    'default' => '',
-    'transport' => 'refresh',
-    'section' => $careers_section,
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control(new WP_Customize_Image_Control(
+  // Careers top image
+  $wp_customize->add_setting($careers_top_image);
+  $wp_customize->add_control(new WP_Customize_Cropped_Image_Control(
     $wp_customize,
-    $careers_top_image,
+    $careers_top_image_control,
     array(
-      'label' => __('Careers Top Image'),
-      'description' => esc_html__('Image in orange half of the page'),
+      'label' => 'Careers Top (Image)',
       'section' => $careers_section,
-      'button_labels' => array( // Optional.
-        'select' => __('Select Image'),
-        'change' => __('Change Image'),
-        'remove' => __('Remove'),
-        'default' => __('Default'),
-        'placeholder' => __('No image selected'),
-        'frame_title' => __('Select Image'),
-        'frame_button' => __('Choose Image'),
-      )
+      'settings' => $careers_top_image,
+      'width' => 800,
+      'height' => 600
     )
   ));
 }
