@@ -28,9 +28,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
   color: white;
 } */
 
-html{
+html {
   font-size: 62.5%;
 }
+
 /* Remove default padding */
 
 ul[class],
@@ -156,8 +157,7 @@ select {
   color: #FF9A4A;
 }
 
-.prospective-student-interest-form {
-}
+.prospective-student-interest-form {}
 
 /* END Reset */
 /* 
@@ -181,7 +181,7 @@ select {
   --text-primary: #FF9A4A;
   --text-secondary: #924e16;
   --border: thin solid rgba(255, 255, 255, .15);
-  --shadow: 0 8px 40px 0 rgba(0,0,0, .15);
+  --shadow: 0 8px 40px 0 rgba(0, 0, 0, .15);
   --max-content-width: 2000px;
 }
 
@@ -208,19 +208,20 @@ select {
 /*************************************
   Header styles 
 **************************************/
-.header-section{
+.header-section {
   position: relative;
   text-align: center;
 }
-.header-picture{
+
+.header-picture {
   /* position: absolute; */
   /* opacity: 1; */
   filter: brightness(50%);
 }
 
-.header-text{
+.header-text {
   position: absolute;
-  color:white;
+  color: white;
   top: 50%;
   left: 50%;
   margin-top: -2rem;
@@ -237,17 +238,17 @@ select {
   padding: 0.8rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;  
+  align-items: center;
   /* box-shadow: var(--shadow); */
 }
 
-.header-container > a{
+.header-container>a {
   color: var(--text-primary);
   text-decoration: none;
 }
 
-.header-logo{
-  display:flex;
+.header-logo {
+  display: flex;
   align-items: center;
   /* font-weight: 600; */
   font-size: 4.5rem;
@@ -255,18 +256,18 @@ select {
 }
 
 
-.logo{
+.logo {
   width: 10rem;
   height: auto;
 }
 
-.nav > ul{
+.nav>ul {
   display: flex;
   justify-content: flex-end;
   list-style-type: none;
 }
 
-.nav > ul > li{
+.nav>ul>li {
   padding-right: 3rem;
 }
 
@@ -292,11 +293,11 @@ select {
   cursor: pointer;
 }
 
-.nav > li {
+.nav>li {
   padding: .5rem 1rem;
 }
 
-.nav > li > a {
+.nav>li>a {
   cursor: pointer;
   font-weight: 600;
   width: 100%;
@@ -315,19 +316,19 @@ select {
   margin-left: 8rem;
   margin-right: 35rem;
   margin-top: 3rem;
- 
+
   /* border-top: var(--border); */
 }
 
-.footer-first-section{
+.footer-first-section {
   /* padding-right: 2rem; */
 }
 
-.footer-bottom-single{
+.footer-bottom-single {
   max-width: 20rem;
 }
 
-.footer-body{
+.footer-body {
   background-color: var(--dark-grey);
   display: flex;
   font-size: 1.8rem;
@@ -339,31 +340,36 @@ select {
   color: var(--white);
 }
 
-.footer-list{
+.footer-list {
   text-decoration: none;
   list-style-type: none;
 }
-.footer-list > li{
+
+.footer-list>li {
   margin-bottom: 1rem;
 }
-a:not([footer-list]){
-  color:white;
+
+a:not([footer-list]) {
+  color: white;
 }
+
 /* a.footer-list{
 } */
-.footer-white{
+.footer-white {
   white-space: pre-line;
 }
-.footer-white2{
+
+.footer-white2 {
   width: 15rem;
 }
-.footer-big-name{
+
+.footer-big-name {
   color: var(--white);
   font-size: 2.3rem;
   margin-bottom: 2rem;
 }
 
-.footer-orange{
+.footer-orange {
   color: var(--orange);
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -375,7 +381,7 @@ a:not([footer-list]){
   src: url(Fonts/Mulish/Mulish-VariableFont_wght.ttf);
 } */
 
-.side-by-side-section{
+.side-by-side-section {
   background-color: #5E5C5C;
   width: 100%;
   padding-top: 5.5em;
@@ -405,9 +411,7 @@ a:not([footer-list]){
   align-items: center;
 }
 
-.side-by-side-image {
-
-}
+.side-by-side-image {}
 
 .side-by-side-text {
   font-size: 3rem;
@@ -556,88 +560,99 @@ a:not([footer-list]){
   width: 40%;
   height: auto;
 }
+
 /* News and Events End */
-.about_us {
-   
-  background-color: #212121;
-  text-align: center; 
-  padding-bottom: 5rem; 
+
+/* Careers Start */
+
+.careers-orange-half {
+  background-color: #FF9A4A;
 }
+
+/* Careers End */
+.about_us {
+
+  background-color: #212121;
+  text-align: center;
+  padding-bottom: 5rem;
+}
+
 .our_philosophy {
-  color: #FF9A4A;  
-  font-size: 5.5rem; 
+  color: #FF9A4A;
+  font-size: 5.5rem;
   margin-top: 4.2rem;
-  font-weight: 700; 
+  font-weight: 700;
   /* font-family: Serif;   */
-  text-align: center; 
+  text-align: center;
 }
 
 .description {
   color: #FFFFFF;
-  font-size: 2.2rem; 
-  font-family: Playfair Display; 
+  font-size: 2.2rem;
+  font-family: Playfair Display;
   font-weight: 400;
-  text-align: center; 
-  
+  text-align: center;
+
 }
 
 .text {
-  padding-top: 42px; 
+  padding-top: 42px;
   padding-left: 199px;
-  padding-right: 199px; 
+  padding-right: 199px;
   padding-bottom: 4rem;
 }
 
 .orange_text_one {
-  color: #FF9A4A; 
+  color: #FF9A4A;
 }
 
 
 .who_we_are {
-  padding-right: 10rem; 
+  padding-right: 10rem;
 
-  display: flex; 
-  
+  display: flex;
+
   align-items: center;
   justify-content: space-evenly;
 
   background-color: #5E5C5C;
-  color: white; 
-  font-size: 2.5rem; 
+  color: white;
+  font-size: 2.5rem;
   font-weight: normal;
-  padding-top: 5rem; 
+  padding-top: 5rem;
   padding-bottom: 9rem;
 
 }
+
 .heading {
-  padding-bottom: 3.5rem; 
+  padding-bottom: 3.5rem;
 }
 
 .paragraph {
-  font-size: 2.5rem; 
+  font-size: 2.5rem;
 }
 
 .who_are_we_img {
   padding-top: 6rem;
-  width: 250rem; 
-  height: auto; 
+  width: 250rem;
+  height: auto;
 }
 
 .goals {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: #212121; 
-  color: white; 
+  background-color: #212121;
+  color: white;
 
-  display: flex; 
-  align-items: center; 
-  justify-content: space-evenly; 
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .creative {
   text-align: center;
-  font-size: 2.5rem; 
-  font-weight: normal; 
+  font-size: 2.5rem;
+  font-weight: normal;
 }
 
 .quotes_img {
@@ -651,45 +666,45 @@ a:not([footer-list]){
 }
 
 .purple_section {
-  padding-top: 8rem; 
+  padding-top: 8rem;
   color: black;
-  background-color: #AF6FFF; 
-  padding-bottom: 8rem; 
-  padding-right: 10rem; 
-  padding-left: 10rem; 
+  background-color: #AF6FFF;
+  padding-bottom: 8rem;
+  padding-right: 10rem;
+  padding-left: 10rem;
 }
 
 .promise {
-  font-size: 5.5rem; 
+  font-size: 5.5rem;
   padding-bottom: 5rem;
-  font-weight: bold; 
-} 
+  font-weight: bold;
+}
 
 
 
 
 .welcome {
- 
-  color: white; 
-  position: relative; 
+
+  color: white;
+  position: relative;
 }
 
-.collage-photo{
+.collage-photo {
   object-fit: cover;
   width: 100%;
   height: 100%;
-  
+
 }
 
 .welcome-text {
-  text-align: center; 
+  text-align: center;
   padding-right: 3rem;
-  padding-left: 3rem; 
-  background-color: #212121; 
-  top: 25%; 
-  right: 33%; 
-  left: 33%; 
-  position: absolute; 
+  padding-left: 3rem;
+  background-color: #212121;
+  top: 25%;
+  right: 33%;
+  left: 33%;
+  position: absolute;
   border-color: var(--light-purple);
   border-width: 2px;
   border-style: solid;
@@ -697,19 +712,19 @@ a:not([footer-list]){
 }
 
 .heading {
-  font-size: 5rem; 
+  font-size: 5rem;
 }
 
 .paragraph {
-  font-size: 2.2rem; 
+  font-size: 2.2rem;
 }
 
 .images {
-  padding-top: 5rem; 
-  background-color: #FF9A4A; 
-  display: flex; 
-  align-items: center; 
-  justify-content: space-evenly; 
+  padding-top: 5rem;
+  background-color: #FF9A4A;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 
@@ -731,44 +746,28 @@ a:not([footer-list]){
 
 .words {
   padding-top: 5rem;
-  padding-bottom: 5rem; 
+  padding-bottom: 5rem;
   color: black;
-  background-color: #FF9A4A; 
-  font-size: 2.5rem; 
+  background-color: #FF9A4A;
+  font-size: 2.5rem;
   text-decoration: underline;
-  font-weight: bold; 
-  display: flex; 
-  align-items: center; 
-  justify-content: space-evenly; 
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 
 }
 
 .video {
-  padding-top: 3rem; 
-  padding-bottom: 3rem; 
-  background-color: #212121; 
-  font-size: 3rem; 
-  font-weight: bold; 
-  color: white; 
-  display: flex; 
-  align-items: center; 
-  justify-content: space-evenly; 
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #212121;
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
-.difference {
-  
-  
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
+.difference {}
