@@ -25,7 +25,9 @@ require get_template_directory() . '/inc/section_vars.php';
             <br>
             <p>Email all necessary documents and identification to teach2reachinc@aol.com.</p>
         </div>
-        <div class="careers-orange-half-2"></div>
+        <div class="careers-orange-half-2">
+            <img class="" src="<?php echo wp_get_attachment_url(get_theme_mod($careers_top_image)) ?>" />
+        </div>
     </div>
 </div>
 

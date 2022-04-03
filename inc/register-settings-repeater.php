@@ -271,41 +271,32 @@ function careers_repeatable_customizer($wp_customize)
     )
   );
 
-  $wp_customize->add_control(
-    new Onepress_Customize_Repeatable_Control(
-      $wp_customize,
-      $careers_repeater,
-      array(
-        'label'     => esc_html__('Photo Gallery Images'),
-        'description'   => 'Add images to the Photo Gallery here.',
-        'section'       => $photo_gallery_section,
-        'live_title_id' => 'name',
-        'title_format'  => esc_html__('[live_title]'), // [live_title]
-        'max_item'      => 300, // Maximum item can add
-        'limited_msg'   => wp_kses_post(__('Max images added')),
-        'fields'    => array(
-          'photo'  => array(
-            'title' => esc_html__('Photo'),
-            'type'  => 'media',
-          ),
-          'name'  => array(
-            'title' => esc_html__('Teacher Name'),
-            'type'  => 'text',
-          ),
-          'job'  => array(
-            'title' => esc_html__('Job'),
-            'type'  => 'text',
-          ),
-          'bio'  => array(
-            'title' => esc_html__('Bio'),
-            'type'  => 'text',
-          ),
-        ),
+  $wp_customize->add_setting($careers_top_image, array(
+    'default' => '',
+    'transport' => 'refresh',
+    'section' => $careers_section,
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+  $wp_customize->add_control(new WP_Customize_Image_Control(
+    $wp_customize,
+    $careers_top_image,
+    array(
+      'label' => __('Careers Top Image'),
+      'description' => esc_html__('Image in orange half of the page'),
+      'section' => $careers_section,
+      'button_labels' => array( // Optional.
+        'select' => __('Select Image'),
+        'change' => __('Change Image'),
+        'remove' => __('Remove'),
+        'default' => __('Default'),
+        'placeholder' => __('No image selected'),
+        'frame_title' => __('Select Image'),
+        'frame_button' => __('Choose Image'),
       )
     )
-  );
+  ));
 }
-add_action('customize_register', 'photo_gallery_repeatable_customizer');
+add_action('customize_register', 'careers_repeatable_customizer');
 
 /*************************************
   Current Students page customizer
@@ -323,7 +314,7 @@ function current_students_repeatable_customizer($wp_customize)
   ));
 
   $wp_customize->add_setting(
-    $photo_gallery_repeater,
+    $student_testimonials_repeater,
     array(
       'sanitize_callback' => 'onepress_sanitize_repeatable_data_field',
       'transport' => 'refresh',
