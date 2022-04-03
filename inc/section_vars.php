@@ -30,6 +30,9 @@
   $photo_gallery_section = 'photo_gallery_section';
   $photo_gallery_repeater = 'photo_gallery_repeater';
 
+  $careers_section = 'careers_section';
+  $careers_repeater = 'careers_repeater';
+
   $student_testimonials_section = 'student_testimonials_section';
   $student_testimonials_top_img = 'student_testimonials_top_img';
   $student_testimonials_top_img_text_1 = 'student_testimonials_top_img_text_1';

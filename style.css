@@ -567,6 +567,43 @@ a:not([footer-list]) {
 
 .careers-orange-half {
   background-color: #FF9A4A;
+
+  font-size: 2.3rem;
+}
+
+.careers-join-us-msg {
+  font-size: 4.8rem;
+  font-weight: bold;
+
+  margin-top: 4rem;
+  margin-left: 4rem;
+  margin-bottom: 4rem;
+}
+
+.careers-orange-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin-left: 8rem;
+}
+
+.careers-orange-row-half-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  width: 50%;
+}
+
+.careers-orange-row-half-2 {
+  object-fit: contain;
+  width: 50%;
+  height: auto;
+}
+
+.careers-orange-subheading {
+  font-size: 2.8rem;
+  font-weight: bolder;
 }
 
 /* Careers End */

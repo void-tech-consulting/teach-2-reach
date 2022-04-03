@@ -249,6 +249,65 @@ function photo_gallery_repeatable_customizer($wp_customize)
 add_action('customize_register', 'photo_gallery_repeatable_customizer');
 
 /*************************************
+  Careers page customizer
+ **************************************/
+function careers_repeatable_customizer($wp_customize)
+{
+  require 'section_vars.php';
+  require_once 'controller.php';
+
+  $wp_customize->add_section($careers_section, array(
+
+    // This is the name of the section that will visually display in 
+    // the admin panel
+    'title' => 'Careers',
+  ));
+
+  $wp_customize->add_setting(
+    $careers_repeater,
+    array(
+      'sanitize_callback' => 'onepress_sanitize_repeatable_data_field',
+      'transport' => 'refresh',
+    )
+  );
+
+  $wp_customize->add_control(
+    new Onepress_Customize_Repeatable_Control(
+      $wp_customize,
+      $careers_repeater,
+      array(
+        'label'     => esc_html__('Photo Gallery Images'),
+        'description'   => 'Add images to the Photo Gallery here.',
+        'section'       => $photo_gallery_section,
+        'live_title_id' => 'name',
+        'title_format'  => esc_html__('[live_title]'), // [live_title]
+        'max_item'      => 300, // Maximum item can add
+        'limited_msg'   => wp_kses_post(__('Max images added')),
+        'fields'    => array(
+          'photo'  => array(
+            'title' => esc_html__('Photo'),
+            'type'  => 'media',
+          ),
+          'name'  => array(
+            'title' => esc_html__('Teacher Name'),
+            'type'  => 'text',
+          ),
+          'job'  => array(
+            'title' => esc_html__('Job'),
+            'type'  => 'text',
+          ),
+          'bio'  => array(
+            'title' => esc_html__('Bio'),
+            'type'  => 'text',
+          ),
+        ),
+      )
+    )
+  );
+}
+add_action('customize_register', 'photo_gallery_repeatable_customizer');
+
+/*************************************
   Current Students page customizer
  **************************************/
 function current_students_repeatable_customizer($wp_customize)
