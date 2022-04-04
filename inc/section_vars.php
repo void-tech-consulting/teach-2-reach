@@ -30,4 +30,10 @@
 
   $photo_gallery_section = 'photo_gallery_section';
   $photo_gallery_repeater = 'photo_gallery_repeater';
+  
+  $footer_panel = 'footer_panel';
+  $footer_section = 'footer_section';
+  $footer_contact_us_text = 'footer_contact_us_text';
+  $footer_address_text = 'footer_address_text';
+  
 ?>

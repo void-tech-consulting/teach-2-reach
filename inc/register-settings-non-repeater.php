@@ -196,5 +196,53 @@ function about_us_customizer($wp_customize)
     ));
 }
 
+function footer_customizer($wp_customize) 
+{
+    require 'section_vars.php';
+
+    //Initialize Panel + Sections
+    $wp_customize->add_panel($footer_panel, array(
+        'title' => __('Teach 2 Reach'),
+        'desription' => esc_html__( 'Adjust your cover sections.').
+        'priority' => 160,
+        'capability' => 'edit_theme_options',
+        'theme_supports' => '',
+        'active_callback' => '',
+        )
+    );
+    $wp_customize->add_section($footer_section, array(
+        'title' => 'Footer Section',
+        'panel' => $footer_panel
+    ));
+
+    $wp_customize->selective_refresh->add_partial($footer_contact_us_text, array(
+        'selector' => 'span#index_footer', // You can also select a css class
+        'render_callback' => 'check_copy_right_text',
+    ));
+    $wp_customize->add_setting($footer_contact_us_text, array(
+        'default' => 'Kesha Norman Founder/Instructor TEL: (810) 391 -9912 EMAIL: teach2reachinc@aol.com',
+        'sanitize_callback' => 'sanitize_text_field'
+    ));    
+    $wp_customize->add_control($footer_contact_us_text, array(
+        'label' => 'Contact Us',
+        'section' => $footer_section,
+        'type' => 'textarea'
+    ));
+
+    $wp_customize->selective_refresh->add_partial($footer_address_text, array(
+        'selector' => 'span#index_footer', // You can also select a css class
+        'render_callback' => 'check_copy_right_text',
+    ));
+    $wp_customize->add_setting($footer_address_text, array(
+        'default' => '3268 Cheyenne Ave. Burton, MI. 48529',
+        'sanitize_callback' => 'sanitize_text_field'
+    ));    
+    $wp_customize->add_control($footer_address_text, array(
+        'label' => 'Address',
+        'section' => $footer_section,
+        'type' => 'textarea'
+    ));
+}
+
 add_action( 'customize_register', 'index_customizer' );
 add_action( 'customize_register', 'about_us_customizer' );

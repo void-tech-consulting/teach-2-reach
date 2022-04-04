@@ -5,16 +5,14 @@
     <div class="footer-first-section">
         <h2 class="footer-big-name">Teach 2 Reach</h2>
         <h1 class="footer-orange">Contact Us</h1>
-        <div class="footer-white footer-white2">Kesha Norman
-            Founder/Instructor
-            TEL: (810) 391-9912
-            EMAIL: teach2reachinc@aol.com
+        <div class="footer-white footer-white2"> 
+            <span id="index_top"><?php  echo get_theme_mod($footer_contact_us_text); ?></span>
         </div>
     </div>
     <div class="footer-bottom-panel">
         <div class="footer-bottom-single">
             <h1 class="footer-orange">Address</h1>
-            3268 Cheyenne Ave. Burton, MI. 48529
+            <span id="index_top"><?php  echo get_theme_mod($footer_address_text); ?></span>
             <!-- Footer 2 -->
         </div>
         <div class="footer-bottom-single">
