@@ -623,6 +623,12 @@ a:not([footer-list]){
   height: auto; 
 }
 
+.middle_picture{
+  width: 30rem;
+  height: 25rem;
+  object-fit: contain;
+}
+
 .goals {
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -754,21 +760,5 @@ a:not([footer-list]){
   align-items: center; 
   justify-content: space-evenly; 
 }
-
-.difference {
-  
-  
-}
-
-
-
-
-
-
-
-
-
-
-
 
 
