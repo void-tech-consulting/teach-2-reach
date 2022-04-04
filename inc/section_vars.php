@@ -21,6 +21,8 @@
   $about_us_middle1_picture = 'about_us_middle1_picture'; 
   $about_us_whoweare_paragraph = 'about_us_whoweare_paragraph'; 
   $about_us_middle2_picture1 = 'about_us_middle2_picture1';
+  $about_us_middle2_picture2 = 'about_us_middle2_picture2';
+
   $about_us_promise_paragraph = 'about_us_promise_paragraph'; 
 
 

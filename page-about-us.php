@@ -20,15 +20,15 @@
 <div class = "who_we_are" >
 
   <div class = "text" > 
-  <h1 class = "heading" > Who We Are </h1> 
-  <p1 class = "paragraph" ><?php echo get_theme_mod($about_us_whoweare_paragraph) ?></p1> 
+    <h1 class = "heading" > Who We Are </h1> 
+    <p1 class = "paragraph" ><?php echo get_theme_mod($about_us_whoweare_paragraph) ?></p1> 
 
-</div> 
+  </div>  
 
-<div class = "picture" >
-<div class="middle-picture" style="background: url(<?php echo get_theme_mod($about_us_middle1_picture) ?>); background-repeat: no-repeat; background-size: cover;"> </div>
-  </div> 
-</div> 
+  <div class = "picture" >
+    <div class="middle_picture" style="background: url(<?php echo get_theme_mod($about_us_middle1_picture) ?>); background-repeat: no-repeat; background-size: cover;"> </div>
+    </div> 
+  </div>
 </div>
 
 
@@ -36,13 +36,13 @@
 
 <div class = "goals" > 
 
-<div class="middle-picture" style="background: url(<?php echo get_theme_mod($about_us_middle2_picture1) ?>); background-repeat: no-repeat; background-size: cover;"> </div>
+  <div class="middle_picture" style="background: url(<?php echo get_theme_mod($about_us_middle2_picture1) ?>); background-repeat: no-repeat; background-size: cover;"> </div>
 
-<h1 class = "creative" > Be Creative <br> <br> <br> Learn New Skills <br> <br> <br> Treat Yourself <br> <br> <br> Make New Friends <h1> 
+  <h1 class = "creative" > Be Creative <br> <br> <br> Learn New Skills <br> <br> <br> Treat Yourself <br> <br> <br> Make New Friends </h1> 
 
 
 
-<div class="middle-picture" style="background: url(<?php echo get_theme_mod($about_us_middle2_picture2) ?>); background-repeat: no-repeat; background-size: cover;"> 
+  <div class="middle_picture" style="background: url(<?php echo get_theme_mod($about_us_middle2_picture2) ?>); background-repeat: no-repeat; background-size: cover;"> </div>
 
 
 

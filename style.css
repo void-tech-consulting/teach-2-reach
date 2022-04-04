@@ -458,6 +458,12 @@ select {
   height: auto; 
 }
 
+.middle_picture{
+  width: 30rem;
+  height: 25rem;
+  object-fit: contain;
+}
+
 .goals {
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -579,21 +585,5 @@ select {
   align-items: center; 
   justify-content: space-evenly; 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
