@@ -129,7 +129,8 @@ function prospective_students_customizer($wp_customize)
 add_action('customize_register', 'prospective_students_customizer');
 
 
-function events_repeater($wp_customize) {
+function events_repeater($wp_customize)
+{
   $wp_customize->add_section('event_repeater_section', array(
     'title' => 'Event Section',
   ));
@@ -150,38 +151,38 @@ function events_repeater($wp_customize) {
       'live_title_id' => 'some_quote',
       'title_format'  => esc_html__('[live_title]'), // [live_title]
       'max_item'      => 10, // Maximum item can add
-      'limited_msg' 	=> wp_kses_post( __( 'Max items added' ) ),
+      'limited_msg'   => wp_kses_post(__('Max items added')),
       'fields'    => array(
-          'event_title'  => array(
-              'title' => esc_html__('Event/News Title'),
-              'type'  =>'text',
-              'default' => ''
-          ),
-          'event_date' => array(
-            'title' => esc_html__('Event/News Date'),
-            'type'  =>'textarea',
-            'default' => 'Month, Day, Year'
-          ),
-          'event_what' => array(
-            'title' => esc_html__('Event/News What Description'),
-            'type'  =>'textarea'
-          ),
-          'event_who' => array(
-            'title' => esc_html__('Event/News Who Description'),
-            'type'  =>'textarea',
-          ),
-          'event_why' => array(
-            'title' => esc_html__('Event/News Why Description'),
-            'type'  =>'textarea',
-          ),
-          'event_img' => array(
-            'title' => esc_html__('Event/News Image'),
-            'type'  =>'media',
-          ),
-          'event_note' => array(
-            'title' => esc_html__('Event/News Additional Note'),
-            'type'  =>'textarea',
-          ),
+        'event_title'  => array(
+          'title' => esc_html__('Event/News Title'),
+          'type'  => 'text',
+          'default' => ''
+        ),
+        'event_date' => array(
+          'title' => esc_html__('Event/News Date'),
+          'type'  => 'textarea',
+          'default' => 'Month, Day, Year'
+        ),
+        'event_what' => array(
+          'title' => esc_html__('Event/News What Description'),
+          'type'  => 'textarea'
+        ),
+        'event_who' => array(
+          'title' => esc_html__('Event/News Who Description'),
+          'type'  => 'textarea',
+        ),
+        'event_why' => array(
+          'title' => esc_html__('Event/News Why Description'),
+          'type'  => 'textarea',
+        ),
+        'event_img' => array(
+          'title' => esc_html__('Event/News Image'),
+          'type'  => 'media',
+        ),
+        'event_note' => array(
+          'title' => esc_html__('Event/News Additional Note'),
+          'type'  => 'textarea',
+        ),
       ),
     )
   ));
@@ -246,3 +247,83 @@ function photo_gallery_repeatable_customizer($wp_customize)
   );
 }
 add_action('customize_register', 'photo_gallery_repeatable_customizer');
+
+/*************************************
+  Current Students page customizer
+ **************************************/
+function current_students_repeatable_customizer($wp_customize)
+{
+  require 'section_vars.php';
+  require_once 'controller.php';
+
+  $wp_customize->add_section($student_testimonials_section, array(
+
+    // This is the name of the section that will visually display in 
+    // the admin panel
+    'title' => 'Current Students',
+  ));
+
+  $wp_customize->add_setting(
+    $photo_gallery_repeater,
+    array(
+      'sanitize_callback' => 'onepress_sanitize_repeatable_data_field',
+      'transport' => 'refresh',
+    )
+  );
+
+  $wp_customize->add_setting($student_testimonials_top_img, array(
+    'default' => '',
+    'transport' => 'refresh',
+    'section' => $student_testimonials_section,
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+  $wp_customize->add_control(new WP_Customize_Image_Control(
+    $wp_customize,
+    $student_testimonials_top_img,
+    array(
+      'label' => __('Current Students Image'),
+      'description' => esc_html__('Image underneath "Current Students"'),
+      'section' => $student_testimonials_section,
+      'button_labels' => array( // Optional.
+        'select' => __('Select Image'),
+        'change' => __('Change Image'),
+        'remove' => __('Remove'),
+        'default' => __('Default'),
+        'placeholder' => __('No image selected'),
+        'frame_title' => __('Select Image'),
+        'frame_button' => __('Choose Image'),
+      )
+    )
+  ));
+
+  $wp_customize->add_control(
+    new Onepress_Customize_Repeatable_Control(
+      $wp_customize,
+      $student_testimonials_repeater,
+      array(
+        'label'     => esc_html__('Photo Gallery Images'),
+        'description'   => 'Add images to the Photo Gallery here.',
+        'section'       => $photo_gallery_section,
+        'live_title_id' => 'name',
+        'title_format'  => esc_html__('[live_title]'), // [live_title]
+        'max_item'      => 300, // Maximum item can add
+        'limited_msg'   => wp_kses_post(__('Max images added')),
+        'fields'    => array(
+          'student_name'  => array(
+            'title' => esc_html__('Student Name'),
+            'type'  => 'text',
+          ),
+          'quote'  => array(
+            'title' => esc_html__('Quote'),
+            'type'  => 'text',
+          ),
+          'photo'  => array(
+            'title' => esc_html__('Photo'),
+            'type'  => 'media',
+          ),
+        ),
+      )
+    )
+  );
+}
+add_action('customize_register', 'current_students_repeatable_customizer');
