@@ -339,5 +339,52 @@ function about_us_customizer($wp_customize)
     ));
 }
 
+function prospective_students_customizer($wp_customize)
+{
+  require 'section_vars.php';
+  $wp_customize->add_section($prospective_students_section, array(
+    'title' => 'Prospective Students Page',
+  ));
+
+  $wp_customize->add_setting($prospective_students_img);
+  $wp_customize->add_control(new WP_Customize_Image_Control(
+    $wp_customize,
+    $prospective_students_img,
+    array(
+      'label' => 'Prospective Student Image',
+      'section' => $prospective_students_section
+    )
+  ));
+
+  $wp_customize->add_setting($prospective_students_form_shortcode, array(
+    'default' => "[shortcode goes here]"
+  ));
+  $wp_customize->add_control($prospective_students_form_shortcode, array(
+    'label' => 'Students form shortcode',
+    'section' => $prospective_students_section,
+    'type' => 'textarea'
+  ));
+}
+
+function donate_customizer($wp_customize)
+{
+  require 'section_vars.php';
+  $wp_customize->add_section($donate_section, array(
+    'title' => 'Donate Page',
+  ));
+
+  $wp_customize->add_setting($donate_form_shortcode, array(
+    'default' => "[shortcode goes here]"
+  ));
+  $wp_customize->add_control($donate_form_shortcode, array(
+    'label' => 'Donate form shortcode',
+    'section' => $donate_section,
+    'type' => 'textarea'
+  ));
+}
+
+
+add_action('customize_register', 'prospective_students_customizer');
+add_action('customize_register', 'donate_customizer');
 add_action( 'customize_register', 'index_customizer' );
 add_action( 'customize_register', 'about_us_customizer' );

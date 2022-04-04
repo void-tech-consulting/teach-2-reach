@@ -73,60 +73,41 @@ function example_repeatable_customizer($wp_customize)
 }
 add_action('customize_register', 'example_repeatable_customizer');
 
-function home_customizer($wp_customize)
-{
-  require 'section_vars.php';
-  $wp_customize->add_section($home_section, array(
-    'title' => 'Testing Home Page',
-  ));
+// function home_customizer($wp_customize)
+// {
+//   require 'section_vars.php';
+//   $wp_customize->add_section($home_section, array(
+//     'title' => 'Testing Home Page',
+//   ));
 
-  $wp_customize->add_setting($home_top_vid, array(
-    'default' => 'https://www.youtube.com/embed/A0Wyx-OOX4A',
-    'sanitize_callback' => 'sanitize_text_field',
-  ));
+//   $wp_customize->add_setting($home_top_vid, array(
+//     'default' => 'https://www.youtube.com/embed/A0Wyx-OOX4A',
+//     'sanitize_callback' => 'sanitize_text_field',
+//   ));
 
-  $wp_customize->add_control($home_top_vid, array(
-    'label' => 'Top Video Embed',
-    'section' => $home_section,
-  ));
+//   $wp_customize->add_control($home_top_vid, array(
+//     'label' => 'Top Video Embed',
+//     'section' => $home_section,
+//   ));
 
-  $wp_customize->add_setting($home_top_img);
-  $wp_customize->add_control(new WP_Customize_Image_Control(
-    $wp_customize,
-    $home_top_img,
-    array(
-      'label' => 'Top Image',
-      'section' => $home_section
-    )
-  ));
-  // Top Desc
-  $wp_customize->add_setting($home_top_desc);
-  $wp_customize->add_control($home_top_desc, array(
-    'label' => 'Top Description',
-    'section' => $home_section,
-    'type' => 'textarea'
-  ));
-}
-add_action('customize_register', 'home_customizer');
-
-function prospective_students_customizer($wp_customize)
-{
-  require 'section_vars.php';
-  $wp_customize->add_section($prospective_students_section, array(
-    'title' => 'Prospective Students Page',
-  ));
-
-  $wp_customize->add_setting($prospective_students_img);
-  $wp_customize->add_control(new WP_Customize_Image_Control(
-    $wp_customize,
-    $prospective_students_img,
-    array(
-      'label' => 'Prospective Student Image',
-      'section' => $prospective_students_section
-    )
-  ));
-}
-add_action('customize_register', 'prospective_students_customizer');
+//   $wp_customize->add_setting($home_top_img);
+//   $wp_customize->add_control(new WP_Customize_Image_Control(
+//     $wp_customize,
+//     $home_top_img,
+//     array(
+//       'label' => 'Top Image',
+//       'section' => $home_section
+//     )
+//   ));
+//   // Top Desc
+//   $wp_customize->add_setting($home_top_desc);
+//   $wp_customize->add_control($home_top_desc, array(
+//     'label' => 'Top Description',
+//     'section' => $home_section,
+//     'type' => 'textarea'
+//   ));
+// }
+// add_action('customize_register', 'home_customizer');
 
 
 function events_repeater($wp_customize) {

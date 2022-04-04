@@ -46,4 +46,7 @@
 
   $photo_gallery_section = 'photo_gallery_section';
   $photo_gallery_repeater = 'photo_gallery_repeater';
+
+  $donate_section = 'donate_section';
+  $donate_form_shortcode = 'donate_form_shortcode';
 ?>
