@@ -1,191 +1,170 @@
 <?php
 
-function register_primary_menu()
+function index_customizer($wp_customize)
 {
-  register_nav_menu('primary', 'Navigation');
-}
-add_action('after_setup_theme', 'register_primary_menu');
+    require 'section_vars.php';
+  
+    // Initialize Panel + Sections
+    $wp_customize->add_panel( $index_panel, array(
+        'title' => __( 'Home Panel' ),
+        'description' => esc_html__( 'Adjust your cover sections.' ), // Include html tags such as 
 
-/*
-*
-* Walker for the main menu 
-*
-*/
-function add_arrow($output, $item, $depth, $args)
-{
-  //Only add class to 'top level' items on the 'primary' menu.
-  if ('primary' == $args->theme_location && $depth === 0) {
-    if (in_array("menu-item-has-children", $item->classes)) {
-      $new_output = '<div class="sub-wrap">' .
-        $output .
-        '<i class="nav-icon fas fa-chevron-down down-icon" aria-hidden="true"></i></div>';
-      return $new_output;
-    }
-  }
-  return $output;
-}
-add_filter('walker_nav_menu_start_el', 'add_arrow', 10, 4);
+        'priority' => 160, // Not typically needed. Default is 160
+        'capability' => 'edit_theme_options', // Not typically needed. Default is edit_theme_options
+        'theme_supports' => '', // Rarely needed
+        'active_callback' => '', // Rarely needed
+        )
+    );
+    $wp_customize->add_section($index_top_section, array(
+        'title' => 'Top Section',
+        'panel' => $index_panel
+    ));
+    $wp_customize->add_section($index_middle_section, array(
+        'title' => 'Middle Section',
+        'panel' => $index_panel
+    ));
+    $wp_customize->add_section($index_bottom_section, array(
+        'title' => 'Bottom Section',
+        'panel' => $index_panel
+    ));
 
-// Example of how to use a repeatable box
+    // Top Section
+    $wp_customize->selective_refresh->add_partial($index_welcome_header, array(
+        'selector' => 'span#index_top', // You can also select a css class
+        'render_callback' => 'check_copy_right_text',
+    ));
+    $wp_customize->add_setting($index_welcome_header, array(
+        'default' => 'Welcome!',
+        'sanitize_callback' => 'sanitize_text_field'
+    ));    
+    $wp_customize->add_control($index_welcome_header, array(
+        'label' => 'Welcome',
+        'section' => $index_top_section,
+        'type' => 'textarea'
+    ));
 
-function example_repeatable_customizer($wp_customize)
-{
-  require 'section_vars.php';
-  require_once 'controller.php';
-
-  $wp_customize->add_section($example_section, array(
-    'title' => 'Example Repeaters',
-  ));
-
-  $wp_customize->add_setting(
-    $example_repeater,
+    $wp_customize->selective_refresh->add_partial($index_welcome_text, array(
+        'selector' => 'span#index_top', // You can also select a css class
+        'render_callback' => 'check_copy_right_text',
+    ));
+    $wp_customize->add_setting($index_welcome_text, array(
+        'default' => 'We teach Barber and Barber Instructor courses (1800 hrs/400hrs respectively) as well as cosmetology essentials and skills with a social twist. Our cosmetology school offers the full 1500hr State of MI course curriculum for licensure.',
+        'sanitize_callback' => 'sanitize_text_field'
+    ));    
+    $wp_customize->add_control($index_welcome_text, array(
+        'label' => 'Welcome',
+        'section' => $index_top_section,
+        'type' => 'textarea'
+    ));
+    
+    // Middle Section - Images
+    $wp_customize->selective_refresh->add_partial($index_middle_picture1, array(
+        'selector' => 'span#index_middle', // You can also select a css class
+        'render_callback' => 'check_copy_right_text',
+    ));
+    $wp_customize->add_setting($index_middle_picture1, array(
+        'default' => '',
+        'transport' => 'refresh',
+        'section' => $index_middle_section,
+        'sanitize_callback' => 'sanitize_text_field'
+    ));    
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, $index_middle_picture1,
     array(
-      'sanitize_callback' => 'onepress_sanitize_repeatable_data_field',
-      'transport' => 'refresh',
-    )
-  );
-
-  $wp_customize->add_control(
-    new Onepress_Customize_Repeatable_Control(
-      $wp_customize,
-      $example_repeater,
-      array(
-        'label'     => esc_html__('Example Q & A Repeater'),
-        'description'   => '',
-        'section'       => $example_section,
-        'live_title_id' => 'some_quote',
-        'title_format'  => esc_html__('[live_title]'), // [live_title]
-        'max_item'      => 10, // Maximum item can add
-        'limited_msg'   => wp_kses_post(__('Max items added')),
-        'fields'    => array(
-          'some_quote'  => array(
-            'title' => esc_html__('Text'),
-            'type'  => 'text',
-          ),
-          'some_image' => array(
-            'title' => esc_html__('Image'),
-            'type'  => 'media',
-          ),
-        ),
-      )
-    )
-  );
-}
-add_action('customize_register', 'example_repeatable_customizer');
-
-function home_customizer($wp_customize)
-{
-  require 'section_vars.php';
-  $wp_customize->add_section($home_section, array(
-    'title' => 'Testing Home Page',
-  ));
-
-  $wp_customize->add_setting($home_top_vid, array(
-    'default' => 'https://www.youtube.com/embed/A0Wyx-OOX4A',
-    'sanitize_callback' => 'sanitize_text_field',
-  ));
-
-  $wp_customize->add_control($home_top_vid, array(
-    'label' => 'Top Video Embed',
-    'section' => $home_section,
-  ));
-
-  $wp_customize->add_setting($home_top_img);
-  $wp_customize->add_control(new WP_Customize_Image_Control(
-    $wp_customize,
-    $home_top_img,
+        'label' => __( 'Image #1' ),
+        'description' => esc_html__( 'Header image of the donate page' ),
+        'section' => $index_middle_section,
+        'button_labels' => array( // Optional.
+            'select' => __( 'Select Image' ),
+            'change' => __( 'Change Image' ),
+            'remove' => __( 'Remove' ),
+            'default' => __( 'Default' ),
+            'placeholder' => __( 'No image selected' ),
+            'frame_title' => __( 'Select Image' ),
+            'frame_button' => __( 'Choose Image' ),
+        )
+    )));
+    
+    $wp_customize->selective_refresh->add_partial($index_middle_picture2, array(
+        'selector' => 'span#index_middle', // You can also select a css class
+        'render_callback' => 'check_copy_right_text',
+    ));
+    $wp_customize->add_setting($index_middle_picture2, array(
+        'default' => '',
+        'transport' => 'refresh',
+        'section' => $index_middle_section,
+        'sanitize_callback' => 'sanitize_text_field'
+    ));    
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, $index_middle_picture2,
     array(
-      'label' => 'Top Image',
-      'section' => $home_section
-    )
-  ));
-  // Top Desc
-  $wp_customize->add_setting($home_top_desc);
-  $wp_customize->add_control($home_top_desc, array(
-    'label' => 'Top Description',
-    'section' => $home_section,
-    'type' => 'textarea'
-  ));
-}
-add_action('customize_register', 'home_customizer');
-
-function prospective_students_customizer($wp_customize)
-{
-  require 'section_vars.php';
-  $wp_customize->add_section($prospective_students_section, array(
-    'title' => 'Prospective Students Page',
-  ));
-
-  $wp_customize->add_setting($prospective_students_img);
-  $wp_customize->add_control(new WP_Customize_Image_Control(
-    $wp_customize,
-    $prospective_students_img,
+        'label' => __( 'Image #2' ),
+        'description' => esc_html__( 'Header image of the donate page' ),
+        'section' => $index_middle_section,
+        'button_labels' => array( // Optional.
+            'select' => __( 'Select Image' ),
+            'change' => __( 'Change Image' ),
+            'remove' => __( 'Remove' ),
+            'default' => __( 'Default' ),
+            'placeholder' => __( 'No image selected' ),
+            'frame_title' => __( 'Select Image' ),
+            'frame_button' => __( 'Choose Image' ),
+        )
+    )));
+    $wp_customize->selective_refresh->add_partial($index_middle_picture3, array(
+        'selector' => 'span#index_middle', // You can also select a css class
+        'render_callback' => 'check_copy_right_text',
+    ));
+    $wp_customize->add_setting($index_middle_picture3, array(
+        'default' => '',
+        'transport' => 'refresh',
+        'section' => $index_middle_section,
+        'sanitize_callback' => 'sanitize_text_field'
+    ));    
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, $index_middle_picture3,
     array(
-      'label' => 'Prospective Student Image',
-      'section' => $prospective_students_section
-    )
-  ));
+        'label' => __( 'Image #3' ),
+        'description' => esc_html__( 'Header image of the donate page' ),
+        'section' => $index_middle_section,
+        'button_labels' => array( // Optional.
+            'select' => __( 'Select Image' ),
+            'change' => __( 'Change Image' ),
+            'remove' => __( 'Remove' ),
+            'default' => __( 'Default' ),
+            'placeholder' => __( 'No image selected' ),
+            'frame_title' => __( 'Select Image' ),
+            'frame_button' => __( 'Choose Image' ),
+        )
+    )));
+
+    // Bottom Section
+    $wp_customize->selective_refresh->add_partial($index_video, array(
+        'selector' => 'span#index_video', // You can also select a css class
+        'render_callback' => 'check_copy_right_text',
+    ));
+    $wp_customize->add_setting($index_video, array(
+        'default' => '',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'absint'
+    ));
+    $wp_customize->add_control($index_video, array(
+        'label' => 'Video Link',
+        'section' => $index_bottom_section,
+        'type' => 'textarea'
+    ));
+
+    $wp_customize->selective_refresh->add_partial($index_bottom_text, array(
+        'selector' => 'span#index_bottom_text', // You can also select a css class
+        'render_callback' => 'check_copy_right_text',
+    ));
+    $wp_customize->add_setting($index_bottom_text, array(
+        'default' => 'Working to Make a Difference',
+        'sanitize_callback' => 'sanitize_text_field'
+    ));    
+    $wp_customize->add_control($index_bottom_text, array(
+        'label' => 'Welcome',
+        'section' => $index_bottom_section,
+        'type' => 'textarea'
+    ));
 }
-add_action('customize_register', 'prospective_students_customizer');
-
-
-function careers_repeater($wp_customize) {
-  $wp_customize->add_section('careers_repeater_section', array(
-    'title' => 'Careers Page',
-  ));
-  $wp_customize->add_setting('careers_repeater_setting', array(
-    'sanitize_callback' => 'onepress_sanitize_repeatable_data_field',
-    'transport' => 'refresh',
-  ));
-  $wp_customize->add_control(new Onepress_Customize_Repeatable_Control(
-    $wp_customize,
-    'career_repeater_setting',
-    array(
-      'label' => esc_html__('Careers Repeater'),
-      'description' => 'This is the repeater where you can add and edit available positions',
-      'section' => 'careers_repeater_section',
-      'live_title',
-      'live_title_id' => 'some_quote',
-      'title_format'  => esc_html__('[live_title]'), // [live_title]
-      'max_item'      => 10, // Maximum item can add
-      'limited_msg'     => wp_kses_post( __( 'Max items added' ) ),
-      'fields'    => array(
-          'career_title'  => array(
-              'title' => esc_html__('Career Title'),
-              'type'  =>'text',
-          ),
-          'career_date_posted' => array(
-            'title' => esc_html__('Career date posted'),
-            'type'  =>'textarea',
-          ),
-          'event_career_deadline' => array(
-            'title' => esc_html__('Career deadline'),
-            'type'  =>'textarea',
-          ),
-          'event_job_description' => array(
-            'title' => esc_html__('Carrer Job Description'),
-            'type'  =>'textarea',
-          ),
-          'career_salary' => array(
-            'title' => esc_html__('Career Salary'),
-            'type'  =>'textarea',
-          ),
-          'career_gif' => array(
-            'title' => esc_html__('Career gif'),
-            'type'  =>'media',
-          ),
-          'career_requirements' => array(
-            'title' => esc_html__('Career requirements'),
-            'type'  =>'textarea',
-          ),
-      ),
-    )
-  ));
-}
-add_action('customize_register', 'careers_repeater');
-
-
-
 
 function about_us_customizer($wp_customize)
 {
@@ -360,10 +339,5 @@ function about_us_customizer($wp_customize)
     ));
 }
 
-add_action('customize_register', 'about_us_customizer');
-
-
-
-
-
-
+add_action( 'customize_register', 'index_customizer' );
+add_action( 'customize_register', 'about_us_customizer' );

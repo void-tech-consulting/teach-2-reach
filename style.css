@@ -64,7 +64,6 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   background: var(--background-main);
-  color: var(--text-primary);
   display: flex;
   flex-direction: column;
 }
@@ -100,24 +99,39 @@ select {
 
 /* Prospective Students Page */
 
+.content-wrapper {
+  width: 100%;
+  max-width: var(--max-content-width);
+}
+
 .page-half-1 {
   background-color: #FF9A4A;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .page-half-2 {
   background-color: #212121;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .prospective-student-img {
   display: flex;
+  object-fit: cover;
   width: 100%;
-  height: auto;
+  height: 527px;
 }
 
 .prospective-student-body {
   width: 90%;
   margin: auto;
   margin-top: 7rem;
+  color: #000000;
 }
 
 .prospective-student-title {
@@ -140,6 +154,9 @@ select {
 .prospective-student-sif {
   font-size: 3.6rem;
   color: #FF9A4A;
+}
+
+.prospective-student-interest-form {
 }
 
 /* END Reset */
@@ -165,6 +182,7 @@ select {
   --text-secondary: #924e16;
   --border: thin solid rgba(255, 255, 255, .15);
   --shadow: 0 8px 40px 0 rgba(0,0,0, .15);
+  --max-content-width: 2000px;
 }
 
 /*************************************
@@ -190,6 +208,27 @@ select {
 /*************************************
   Header styles 
 **************************************/
+.header-section{
+  position: relative;
+  text-align: center;
+}
+.header-picture{
+  /* position: absolute; */
+  /* opacity: 1; */
+  filter: brightness(50%);
+}
+
+.header-text{
+  position: absolute;
+  color:white;
+  top: 50%;
+  left: 50%;
+  margin-top: -2rem;
+  transform: translate(-50%, -50%);
+  font-size: 6rem;
+  font-weight: bolder;
+}
+
 .header-container {
   width: 100%;
   background-color: var(--black);
@@ -266,15 +305,70 @@ select {
 /*************************************
   Bottom panel styles 
 **************************************/
-#bottom-panel {
-  height: 100px;
+.footer-bottom-panel {
+  height: auto;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   padding: 0 var(--padding);
+  margin-left: 8rem;
+  margin-right: 35rem;
+  margin-top: 3rem;
+ 
   /* border-top: var(--border); */
 }
+
+.footer-first-section{
+  /* padding-right: 2rem; */
+}
+
+.footer-bottom-single{
+  max-width: 20rem;
+}
+
+.footer-body{
+  background-color: var(--dark-grey);
+  display: flex;
+  font-size: 1.8rem;
+  flex-direction: row;
+  padding: 2rem;
+  padding-left: 5rem;
+  /* padding-right: 18rem; */
+  padding-bottom: 5rem;
+  color: var(--white);
+}
+
+.footer-list{
+  text-decoration: none;
+  list-style-type: none;
+}
+.footer-list > li{
+  margin-bottom: 1rem;
+}
+a:not([footer-list]){
+  color:white;
+}
+/* a.footer-list{
+} */
+.footer-white{
+  white-space: pre-line;
+}
+.footer-white2{
+  width: 15rem;
+}
+.footer-big-name{
+  color: var(--white);
+  font-size: 2.3rem;
+  margin-bottom: 2rem;
+}
+
+.footer-orange{
+  color: var(--orange);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
 
 /* @font-face {
   font-family: "Playfair Display";
@@ -390,18 +484,86 @@ select {
 }
 
 /* Current Students End */
+
+/* News and Events Start */
+.news-events-container {
+  background-color: #212121;
+  font-size: 2.7rem;
+  line-height: 3.6rem;
+  padding-bottom: 11rem;
+}
+
+.news-events-date {
+  font-size: 2.6rem;
+  line-height: 3.6rem;
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.news-events-event-name {
+  font-size: 3.2rem;
+  line-height: 4.6rem;
+  color: #FF9A4A;
+}
+
+.news-events-subheader {
+  color: #FF9A4A;
+}
+
+.news-events-entry {
+  width: 90%;
+  margin: auto;
+  margin-top: 11rem;
+}
+
+.news-events-entry-subsection {
+  margin-top: 4rem;
+  font-size: 2.7rem;
+}
+
+.news-events-subheader {
+  font-style: italic;
+  font-weight: 700;
+}
+
+.news-events-white-text {
+  color: #FFFFFF;
+  white-space: pre-line;
+}
+
+.news-events-entry-note {
+  margin-top: 8rem;
+  font-size: 2.1rem;
+  line-height: 2.8rem;
+}
+
+.news-events-side-by-side {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.news-events-side-by-side-half-1 {
+  width: 40%;
+}
+
+.news-events-side-by-side-half-2 {
+  object-fit: contain;
+  width: 40%;
+  height: auto;
+}
+/* News and Events End */
 .about_us {
    
   background-color: #212121;
   text-align: center; 
   padding-bottom: 5rem; 
- 
-   
- 
 }
 .our_philosophy {
   color: #FF9A4A;  
   font-size: 5.5rem; 
+  margin-top: 4.2rem;
   font-weight: 700; 
   /* font-family: Serif;   */
   text-align: center; 
@@ -508,14 +670,19 @@ select {
 
 
 
+
 .welcome {
  
   color: white; 
   position: relative; 
-
 }
 
-
+.collage-photo{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  
+}
 
 .welcome-text {
   text-align: center; 
@@ -526,6 +693,9 @@ select {
   right: 33%; 
   left: 33%; 
   position: absolute; 
+  border-color: var(--light-purple);
+  border-width: 2px;
+  border-style: solid;
   padding-bottom: 5rem;
 }
 
@@ -546,19 +716,21 @@ select {
 }
 
 
-.volunteer {
+.middle-picture {
+  max-width: 100%;
+  display: block;
   width: 32rem;
-  height: auto;
+  height: 24rem;
 }
 
-.student {
+/* .student {
   width: 32rem;
   height: auto;
 }
 .donate {
   width: 32rem;
   height: auto;
-}
+} */
 
 .words {
   padding-top: 5rem;
