@@ -2,20 +2,11 @@
   get_header();
   require get_template_directory() . '/inc/section_vars.php';
 ?>
-<!-- <h1>The Front Page</h1>
 
-<?php if (get_theme_mod($home_top_img)) { ?>
-  <img 
-    src="<?php echo get_theme_mod($home_top_img) ?>" 
-    alt=""
-  >
-<?php } ?>
-
-<?php if (get_theme_mod($home_top_desc)) { ?>
-  <h4>
-    <?php echo get_theme_mod($home_top_desc) ?>
-  </h4>
-<?php } ?> -->
+<div class="header-section">
+  <img class="header-picture" src="<?php echo get_template_directory_uri();?>/imgs/about-us-header-picture.png" alt="">
+  <div class="header-text">Current Students</div>
+</div>
 
 <!-- gray box -->
 <div class="side-by-side-section">

@@ -557,6 +557,7 @@ a:not([footer-list]){
   height: auto;
 }
 /* News and Events End */
+/* About Us Start */
 .about_us {
    
   background-color: #212121;
@@ -671,8 +672,8 @@ a:not([footer-list]){
   font-weight: bold; 
 } 
 
-
-
+/* About Us End */
+/* Index Begin */
 
 .welcome {
  
@@ -761,4 +762,4 @@ a:not([footer-list]){
   justify-content: space-evenly; 
 }
 
-
+/* Index End */
