@@ -762,4 +762,38 @@ a:not([footer-list]){
   justify-content: space-evenly; 
 }
 
-/* Index End */
+.difference {
+  
+  
+}
+
+/* responsive */
+@media (max-width: 1080px){
+  html{
+    font-size: 50%;
+  }
+
+}
+
+
+@media (max-width: 768px){
+  html{
+    font-size: 35%;
+  }
+
+}
+
+@media (max-width: 425px){
+  .news-events-side-by-side{
+    flex-direction: column;
+  }
+  .news-events-side-by-side-half-1{
+    width: 100%;
+  }
+  .news-events-side-by-side-half-2{
+    margin-top: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+  }
+}
