@@ -16,18 +16,41 @@
   $index_video = 'index_video';
   $index_bottom_text = 'index_bottom_text';
 
-  
   $example_section = 'example_section';
   $example_repeater = 'example_repeater';
 
   $prospective_students_section = 'prospective_students_section';
   $prospective_students_img = 'prospective_students_icon';
   $prospective_students_name = 'prospective_students_name';
+  $prospective_students_form_shortcode = 'prospective_students_form_shortcode';
+
+
+  $about_us_panel = 'about_us_panel'; 
+  $about_us_top_section = 'about_us_top_section';
+  $about_us_middle1_section = 'about_us_middle1_section'; 
+  $about_us_middle2_section = 'about_us_middle2_section'; 
+  $about_us_bottom_section = 'about_us_bottom_section'; 
+  $about_us_philosophy_paragraph = 'about_us_philosophy_paragraph';
+  $about_us_middle1_picture = 'about_us_middle1_picture'; 
+  $about_us_whoweare_paragraph = 'about_us_whoweare_paragraph'; 
+  $about_us_middle2_picture1 = 'about_us_middle2_picture1';
+  $about_us_middle2_picture2 = 'about_us_middle2_picture2';
+
+  $about_us_promise_paragraph = 'about_us_promise_paragraph'; 
+
+
 
   $news_and_events_section = 'news_and_events_section'; 
   $news_and_events_section_repeater = 'news_and_events_section_repeater'; 
-  $prospective_students_form_shortcode = 'prospective_students_form_shortcode';
 
   $photo_gallery_section = 'photo_gallery_section';
   $photo_gallery_repeater = 'photo_gallery_repeater';
+
+  $donate_section = 'donate_section';
+  $donate_form_shortcode = 'donate_form_shortcode';
+  $student_testimonials_section = 'student_testimonials_section';
+  $student_testimonials_top_img = 'student_testimonials_top_img';
+  $student_testimonials_top_img_text_1 = 'student_testimonials_top_img_text_1';
+  $student_testimonials_top_img_text_2 = 'student_testimonials_top_img_text_2';
+  $student_testimonials_repeater = 'student_testimonials_repeater';
 ?>
