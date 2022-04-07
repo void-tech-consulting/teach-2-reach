@@ -3,6 +3,11 @@ get_header();
 require get_template_directory() . '/inc/section_vars.php';
 ?>
 
+<div class="header-section">
+  <img class="header-picture" src="<?php echo get_template_directory_uri();?>/imgs/about-us-header-picture.png" alt="">
+  <div class="header-text">Prospective Students</div>
+</div>
+
 <div class="page-half-1">
   <?php if (get_theme_mod($prospective_students_img)) { ?>
     <img src="<?php echo get_theme_mod($prospective_students_img) ?>" class="prospective-student-img" alt="">

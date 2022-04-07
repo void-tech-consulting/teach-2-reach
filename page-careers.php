@@ -3,6 +3,11 @@ get_header();
 require get_template_directory() . '/inc/section_vars.php';
 ?>
 
+<div class="header-section">
+  <img class="header-picture" src="<?php echo get_template_directory_uri();?>/imgs/about-us-header-picture.png" alt="">
+  <div class="header-text">About Us</div>
+</div>
+
 <div class="careers-orange-half">
     <p class="careers-join-us-msg">Join us!</p>
 
@@ -33,6 +38,9 @@ require get_template_directory() . '/inc/section_vars.php';
         </div>
     </div>
 </div>
+
+
+
 
 
 <?php get_footer(); ?>
