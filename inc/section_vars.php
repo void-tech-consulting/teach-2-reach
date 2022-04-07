@@ -46,6 +46,10 @@
   $photo_gallery_section = 'photo_gallery_section';
   $photo_gallery_repeater = 'photo_gallery_repeater';
 
+  $careers_section = 'careers_section';
+  $careers_top_image = 'careers_top_image';
+  $careers_top_image_control = 'careers_top_image_control';
+
   $donate_section = 'donate_section';
   $donate_form_shortcode = 'donate_form_shortcode';
   $student_testimonials_section = 'student_testimonials_section';
