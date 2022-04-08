@@ -23,7 +23,7 @@
   $prospective_students_img = 'prospective_students_icon';
   $prospective_students_name = 'prospective_students_name';
   $prospective_students_form_shortcode = 'prospective_students_form_shortcode';
-
+  $prospective_students_repeater = 'prospective_students_repeater';
 
   $about_us_panel = 'about_us_panel'; 
   $about_us_top_section = 'about_us_top_section';
@@ -35,10 +35,7 @@
   $about_us_whoweare_paragraph = 'about_us_whoweare_paragraph'; 
   $about_us_middle2_picture1 = 'about_us_middle2_picture1';
   $about_us_middle2_picture2 = 'about_us_middle2_picture2';
-
   $about_us_promise_paragraph = 'about_us_promise_paragraph'; 
-
-
 
   $news_and_events_section = 'news_and_events_section'; 
   $news_and_events_section_repeater = 'news_and_events_section_repeater'; 

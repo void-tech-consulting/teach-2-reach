@@ -4,7 +4,7 @@ require get_template_directory() . '/inc/section_vars.php';
 ?>
 
 <div class="header-section">
-  <img class="header-picture" src="<?php echo get_template_directory_uri();?>/imgs/about-us-header-picture.png" alt="">
+  <img class="header-picture" src="<?php echo get_template_directory_uri(); ?>/imgs/about-us-header-picture.png" alt="">
   <div class="header-text">Prospective Students</div>
 </div>
 
@@ -30,51 +30,34 @@ require get_template_directory() . '/inc/section_vars.php';
       <br>
       <br>
       <br>
+      <?php
+      // get_example_data is in /inc/template_functions.php
+      $data  = get_events_data($prospective_students_repeater);
+      if (!empty($data)) {
+      ?>
+        <?php
+        foreach ($data as $k => $f) {
+        ?>
+          <h1 class="prospective-student-h1"><?php echo $f['program_title'] ?></h1>
+          <br>
+          <p class="prospective-student-p"><strong>Description: </strong><?php echo $f['description'] ?></p>
+          <br>
+          <p class="prospective-student-p"><strong>Time: <?php echo $f['time'] ?></strong>
+            1500 hours</p>
+          <br>
+          <p class="prospective-student-p"><strong>Additional Requirements:</strong>
+          <p class="prospective-student-p"><?php echo $f['requirements'] ?></p>
+          </ul>
 
-      <h1 class="prospective-student-h1">Professional (MI) Barber (licensing) Program</h1>
-      <br>
-      <p class="prospective-student-p"><strong>Description: </strong>
-        This program is designed to prepare candidates for state exam and
-        licensure in the field of cosmotology. Cosmetology is a service occupation
-        that deals with hair, skin, and nails. Career paths inlude opportunities
-        to work in a salon as a professional stylist, manager, or business owner.</p>
-      <br>
-      <p class="prospective-student-p"><strong>Time: </strong>
-        1500 hours</p>
-      <br>
-      <p class="prospective-student-p"><strong>Additional Requirements:</strong></p>
-      <ul>
-        <li class="prospective-student-p">Proof of 10th grade education of higher</li>
-        <li class="prospective-student-p">Proof of age 17 years or older</li>
-        <li class="prospective-student-p">Completion of 1500 hours; course program
-          including theory and practical
-        </li>
-      </ul>
-
-      <br>
-      <br>
-      <br>
-
-      <h1 class="prospective-student-h1">Professional (MI) Cosmetology Instructor
-        (Licensing) Program
-      </h1>
-      <br>
-      <p class="prospective-student-p"><strong>Description: </strong>
-        This program is designed to prepare <em><strong>licensed</strong></em>
-        cosmetologists for the state exam and licensure for cosmetology Instructor.
-        Cosmetology Instructors work in educational settings. Career paths include
-        opportunities to work in a cosmetology school as a teacher or school owner.</p>
-      <br>
-      <p class="prospective-student-p"><strong>Time: </strong>
-        500 hours</p>
-      <br>
-      <p class="prospective-student-p"><strong>Additional Requirements:</strong></p>
-      <ul>
-        <li class="prospective-student-p">Proof of state cosmetology license</li>
-        <li class="prospective-student-p">Completion of 500 hours; course program
-          including lesson planning and demonstrations.
-        </li>
-      </ul>
+          <br>
+          <br>
+          <br>
+        <?php
+        }
+        ?>
+      <?php
+      }
+      ?>
     </div>
   </div>
 </div>
