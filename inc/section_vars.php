@@ -49,9 +49,16 @@
 
   $donate_section = 'donate_section';
   $donate_form_shortcode = 'donate_form_shortcode';
+
   $student_testimonials_section = 'student_testimonials_section';
   $student_testimonials_top_img = 'student_testimonials_top_img';
   $student_testimonials_top_img_text_1 = 'student_testimonials_top_img_text_1';
   $student_testimonials_top_img_text_2 = 'student_testimonials_top_img_text_2';
   $student_testimonials_repeater = 'student_testimonials_repeater';
+  $student_testimonials_row1_name = 'student_testimonials_row1_name';
+  $student_testimonials_row1_quote = 'student_testimonials_row1_quote';
+  $student_testimonials_row1_img = 'student_testimonials_row1_img';
+  $student_testimonials_rowLast_name = 'student_testimonials_rowLast_name';
+  $student_testimonials_rowLast_quote = 'student_testimonials_rowLast_quote';
+  $student_testimonials_rowLast_img = 'student_testimonials_rowLast_img';
 ?>
