@@ -219,6 +219,9 @@ select {
   /* position: absolute; */
   /* opacity: 1; */
   filter: brightness(50%);
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .header-text {
