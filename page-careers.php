@@ -5,9 +5,11 @@ require get_template_directory() . '/inc/section_vars.php';
 
 <div class="header-section">
   <img class="header-picture" src="<?php echo get_template_directory_uri();?>/imgs/about-us-header-picture.png" alt="">
-  <div class="header-text">About Us</div>
+  <div class="header-text">Careers</div>
 </div>
-
+<div class="header-section-mobile">
+    Careers
+</div>
 <div class="careers-orange-half">
     <p class="careers-join-us-msg">Join us!</p>
 
@@ -39,7 +41,32 @@ require get_template_directory() . '/inc/section_vars.php';
     </div>
 </div>
 
-
+<div class="careers-black-half">
+    <h1 class="careers-positions-header">Available Positions</h1>
+    <div class="careers-item">
+        <div class="careers-item-meta">
+            <div class="careers-item-date">Date</div>
+            <div class="careers-item-deadline">Deadline</div> 
+        </div>
+        <div class="careers-item-body">
+            <img class="careers-item-icon" src="<?php echo get_template_directory_uri(); ?>/imgs/ellipse.png" ></img>
+            <div class="careers-item-info">
+                <div class="careers-item-info-header">Header</div>
+                <div class="careers-item-info-text">Job description: This position will entail that the candidate to be willing and manage
+comprehensive functions related to the daily operations of the school office, data entry, and
+files.
+Salary: $18/hour
+Requirements: 
+Proficient in computer software
+Effective in written and verbal communication
+Ability to manage multiple tasks
+Must be well organized
+Must understand how to input and interpret data entry
+</div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 

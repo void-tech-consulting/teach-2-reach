@@ -9,6 +9,7 @@
   <!-- Icon CDN -->
   <script type="module" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule="" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
@@ -23,18 +24,23 @@
   <div class="header-container">
     <!-- Logo + Name -->
     <a class="header-logo" href='<?php echo $home_link; ?>' >
-      <img class="logo" src="<?php echo get_template_directory_uri(); ?>/imgs/logo.png" />
-      <div>Teach 2 Reach</div>
+        <img class="logo" src="<?php echo get_template_directory_uri(); ?>/imgs/logo.png" />
+        <div class="header-logo-text">Teach 2 Reach</div>
     </a>
-      <!-- Navigation -->
-    <?php
-    $args = array(
-      "theme_location" => "primary",
-      "menu" => "Navigation",         // Same name as menu we registered in register-settings.php
-      "menu_class" => "nav"
-    );
-    wp_nav_menu($args);
-    ?>
+    <nav class="site-nav">
+      <ion-icon class="menu-toggle" name="menu-outline" size="large"></ion-icon>
+      <div class="menu-wrapper">
+          <!-- Navigation -->
+        <?php
+        $args = array(
+          "theme_location" => "primary",
+          "menu" => "Navigation",         // Same name as menu we registered in register-settings.php
+          "menu_class" => "nav"
+        );
+        wp_nav_menu($args);
+        ?>
+      </div>
+    </nav>
   </div>
 
   <!-- body tag is closed in ./footer.php -->
