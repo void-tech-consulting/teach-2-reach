@@ -105,6 +105,13 @@ select {
   max-width: var(--max-content-width);
 }
 
+.h-line {
+  border: 1px solid black;
+
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
 .page-half-1 {
   background-color: #FF9A4A;
 

@@ -45,7 +45,7 @@ require get_template_directory() . '/inc/section_vars.php';
     <h1 class="careers-positions-header">Available Positions</h1>
     <div class="careers-item">
         <div class="careers-item-meta">
-            <div class="careers-item-date">Date</div>
+            <div class="careers-item-date"><strong>Date Posted: </strong></div>
             <div class="careers-item-deadline">Deadline</div> 
         </div>
         <div class="careers-item-body">

@@ -8,7 +8,7 @@ require get_template_directory() . '/inc/section_vars.php';
   <div class="header-text">Prospective Students</div>
 </div>
 <div class="header-section-mobile">
-    Prospective Students
+  Prospective Students
 </div>
 
 <div class="page-half-1">
@@ -33,6 +33,8 @@ require get_template_directory() . '/inc/section_vars.php';
       <br>
       <br>
       <br>
+      <hr class="h-line">
+
       <?php
       // get_example_data is in /inc/template_functions.php
       $data  = get_events_data($prospective_students_repeater);
@@ -45,15 +47,22 @@ require get_template_directory() . '/inc/section_vars.php';
           <br>
           <p class="prospective-student-p"><strong>Description: </strong><?php echo $f['description'] ?></p>
           <br>
-          <p class="prospective-student-p"><strong>Time: <?php echo $f['time'] ?></strong></p>
+          <p class="prospective-student-p"><strong>Time: </strong><?php echo $f['time'] ?></p>
           <br>
           <p class="prospective-student-p"><strong>Additional Requirements:</strong>
           <p class="prospective-student-p"><?php echo $f['requirements'] ?></p>
           </ul>
 
+
+          <hr class="h-line">
+          <!-- <br>
           <br>
           <br>
           <br>
+          <br>
+          <br>
+          <br>
+          <br> -->
         <?php
         }
         ?>
