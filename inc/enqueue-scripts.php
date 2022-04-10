@@ -4,7 +4,14 @@ function add_scripts()
 {
   wp_enqueue_script(
     "ajax-script",
-    get_theme_file_uri("/js/mobile-menu.js"),
+    get_theme_file_uri("/js/nav.js"),
+    array('jquery'),
+    '1.0.0',
+    true
+  );
+  wp_enqueue_script(
+    "ajax-script",
+    get_theme_file_uri("/js/sub-menu.js"),
     array('jquery'),
     '1.0.0',
     true
