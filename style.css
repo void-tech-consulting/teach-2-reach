@@ -329,14 +329,47 @@ select {
 
 .nav>li {
   padding: .5rem 1rem;
+  font-weight: 500;
 }
 
 .nav>li>a {
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 500;
   width: 100%;
 }
+.sub-menu {
+  display: none;
+  top: 8.6rem;
+  z-index: 99999;
+}
 
+.sub-menu .menu-item li {
+  font-size: 1.6rem;
+}
+
+.sub-menu .menu-item a {
+  background-color: grey;
+  color: #5C6E93;
+  width: 20rem;
+} 
+
+
+.sub-menu li:hover a{
+  background-color: #5C6E93;
+  color: white;
+}
+
+@media screen and (min-width: 801px) {
+  /* Drop-down menu in big nav bar */
+  .nav-links li:hover > .sub-menu {
+    display: block;
+    position: absolute;
+  }
+  .nav-links li:hover:not(:last-child):not(:nth-last-child(2)) {
+    background-color: white;
+    color: #5C6E93;
+  }
+}
 /*************************************
   Bottom panel styles 
 **************************************/
@@ -809,6 +842,42 @@ a:not([footer-list]) {
 }
 
 /* About Us End */
+
+/* Donate Begin */
+.donate-body{
+  display: flex;
+}
+.donate-left{
+  background-color: var(--dark-grey);
+  width: 87%;
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+  display: flex;
+  align-items: center;
+}
+.donate-middle-section{
+  width: 46%;
+  font-size: 4rem;
+  color: var(--white);
+  font-weight: 500;
+  padding-left: 1%;
+  padding-right: 1%;
+  /* height: 40rem; */
+  background-color: var(--dark-purple);
+  /* vertical-align: middle; */
+  padding-top: 15rem;
+  padding-bottom: 15rem;
+  position: absolute;
+  text-align: center;
+  filter: drop-shadow(2px 4px 5px black);
+}
+.donate-right{
+  padding-top: 10rem;
+  padding-left: 13rem;
+  padding-right: 13rem;
+}
+/* Donate End */
+
 /* Index Begin */
 
 .welcome {
@@ -861,15 +930,6 @@ a:not([footer-list]) {
   width: 32rem;
   height: 24rem;
 }
-
-/* .student {
-  width: 32rem;
-  height: auto;
-}
-.donate {
-  width: 32rem;
-  height: auto;
-} */
 
 .words {
   padding-top: 5rem;
@@ -1029,3 +1089,11 @@ a:not([footer-list]) {
   }
 }
 /* Mobile Menu End */
+
+/* Responsive Donate Begin */
+/* @media (max-width: 1375px){
+  .donate-middle-section{
+    width: 42%;
+  }
+}
+Responsive Donate Begin */

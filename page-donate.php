@@ -11,19 +11,15 @@ require get_template_directory() . '/inc/section_vars.php';
     Donate
 </div>
 
-<div class="page-half-2">
-  <div class="content-wrapper">
-    <div class="prospective-student-body">
-      <h1 class="prospective-student-sif"></h1>
-
-
-      <div class="prospective-student-interest-form">
-        <?php
-        $shortcode = get_theme_mod($donate_form_shortcode);
-        echo do_shortcode($shortcode);
-        ?>
-      </div>
-    </div>
+<div class="donate-body">
+  <div class="donate-left">
+    <div class="donate-middle-section">Help make a difference in the Genesee County community.</div>
+  </div>
+  <div class="donate-right">
+    <?php
+    $shortcode = get_theme_mod($donate_form_shortcode);
+    echo do_shortcode($shortcode);
+    ?>
   </div>
 </div>
 
