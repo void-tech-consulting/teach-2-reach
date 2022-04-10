@@ -499,6 +499,7 @@ a:not([footer-list]) {
   color: #FFFFFF;
   font-size: 35px;
   line-height: 30px;
+  font-weight: normal;
 }
 
 .student-testimonials-entry-img {
@@ -955,6 +956,27 @@ a:not([footer-list]) {
     width: 250px;
   }
 }
+/* Responsiveness for Current Students Start */
+@media (max-width: 1080px){
+  .student-testimonials-entry-img{
+    display:none;
+  }
+  .student-testimonials-row{
+    flex-direction: column-reverse;
+  }
+  .student-testimonials-entry{
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 768px){
+}
+
+@media (max-width: 425px){
+
+}
+/* Responsiveness for Current Students End */
 
 
 /* Mobile Menu Start */
