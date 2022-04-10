@@ -493,7 +493,11 @@ a:not([footer-list]) {
 }
 
 .bold-text {
-  font-weight: 700;
+  font-weight: bold;
+}
+
+.italic-text {
+  font-style: italic;
 }
 
 /* Student testimonials section */
@@ -505,7 +509,6 @@ a:not([footer-list]) {
 
 .current-students-testimonials-header {
   color: #8C67DC;
-
 }
 
 .student-testimonials-container {
@@ -515,7 +518,7 @@ a:not([footer-list]) {
 }
 
 .student-testimonials-row {
-  margin-bottom: 6.6rem;
+  margin-bottom: 4rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -524,31 +527,24 @@ a:not([footer-list]) {
 }
 
 .student-testimonials-entry {
-  width: 50%;
+  width: 45%;
 }
 
 .student-testimonials-entry-text {
   letter-spacing: -0.015em;
   color: #FFFFFF;
   font-size: 35px;
-  line-height: 30px;
-  font-weight: normal;
 }
 
 .student-testimonials-entry-img {
   /* width: 43.9rem; */
   object-fit: contain;
-  width: 50%;
   height: auto;
 }
 
 .student-testimonials-entry-header {
   line-height: 7.5rem;
 }
-
-/* .student-testimonial-offset-side {
-  padding-top: 10rem;
-} */
 
 .student-testimonials-entry-text.student-testimonial-offset-side {
   padding-top: 10rem;
@@ -894,7 +890,6 @@ a:not([footer-list]) {
   object-fit: cover;
   width: 100%;
   height: 100%;
-
 }
 
 .welcome-text {

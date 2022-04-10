@@ -275,14 +275,6 @@ function current_students_repeatable_customizer($wp_customize)
     'title' => 'Current Students',
   ));
 
-  $wp_customize->add_setting(
-    $student_testimonials_repeater,
-    array(
-      'sanitize_callback' => 'onepress_sanitize_repeatable_data_field',
-      'transport' => 'refresh',
-    )
-  );
-
   $wp_customize->add_setting($student_testimonials_top_img, array(
     'default' => '',
     'transport' => 'refresh',
@@ -308,35 +300,137 @@ function current_students_repeatable_customizer($wp_customize)
     )
   ));
 
+  $wp_customize->add_setting($student_testimonials_row1_name, array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+  $wp_customize->add_control($student_testimonials_row1_name, array(
+    'label' => 'Student Testimonials 1st Row Name',
+    'description' => '1st student under "Student Testimonials section"',
+    'section' => $student_testimonials_section,
+    'type' => 'text'
+  ));
+  $wp_customize->add_setting($student_testimonials_row1_quote, array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+  $wp_customize->add_control($student_testimonials_row1_quote, array(
+    'label' => 'Student Testimonials 1st Row Quote',
+    'description' => '1st student under "Student Testimonials section"',
+    'section' => $student_testimonials_section,
+    'type' => 'textarea'
+  ));
+  $wp_customize->add_setting($student_testimonials_row1_img, array(
+    'default' => '',
+    'transport' => 'refresh',
+    'section' => $student_testimonials_section,
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+  $wp_customize->add_control(new WP_Customize_Image_Control(
+    $wp_customize,
+    $student_testimonials_row1_img,
+    array(
+      'label' => __('Student Testimonials 1st Row Image'),
+      'description' => esc_html__('Image underneath "Student Testimonials"'),
+      'section' => $student_testimonials_section,
+      'button_labels' => array( // Optional.
+        'select' => __('Select Image'),
+        'change' => __('Change Image'),
+        'remove' => __('Remove'),
+        'default' => __('Default'),
+        'placeholder' => __('No image selected'),
+        'frame_title' => __('Select Image'),
+        'frame_button' => __('Choose Image'),
+      )
+    )
+  ));
+
+  $wp_customize->add_setting(
+    $student_testimonials_repeater,
+    array(
+      'sanitize_callback' => 'onepress_sanitize_repeatable_data_field',
+      'transport' => 'refresh',
+    )
+  );
+
   $wp_customize->add_control(
     new Onepress_Customize_Repeatable_Control(
       $wp_customize,
       $student_testimonials_repeater,
       array(
-        'label'     => esc_html__('Photo Gallery Images'),
-        'description'   => 'Add images to the Photo Gallery here.',
-        'section'       => $photo_gallery_section,
-        'live_title_id' => 'name',
+        'label'     => esc_html__('Student Testimonial Quotes'),
+        'description'   => 'Add more student testimonials here.',
+        'section'       => $student_testimonials_section,
+        'live_title_id' => 'student_name_1',
         'title_format'  => esc_html__('[live_title]'), // [live_title]
         'max_item'      => 300, // Maximum item can add
         'limited_msg'   => wp_kses_post(__('Max images added')),
         'fields'    => array(
-          'student_name'  => array(
-            'title' => esc_html__('Student Name'),
+          'student_name_1'  => array(
+            'title' => esc_html__('Student 1 Name'),
             'type'  => 'text',
           ),
-          'quote'  => array(
-            'title' => esc_html__('Quote'),
+          'quote_1'  => array(
+            'title' => esc_html__('Quote 1'),
             'type'  => 'text',
           ),
-          'photo'  => array(
-            'title' => esc_html__('Photo'),
-            'type'  => 'media',
+          'student_name_2'  => array(
+            'title' => esc_html__('Student 2 Name'),
+            'type'  => 'text',
+          ),
+          'quote_2'  => array(
+            'title' => esc_html__('Quote 2'),
+            'type'  => 'text',
           ),
         ),
       )
     )
   );
+
+  $wp_customize->add_setting($student_testimonials_rowLast_name, array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+  $wp_customize->add_control($student_testimonials_rowLast_name, array(
+    'label' => 'Student Testimonials Last Row Name',
+    'description' => 'Last student under "Student Testimonials section"',
+    'section' => $student_testimonials_section,
+    'type' => 'text'
+  ));
+  $wp_customize->add_setting($student_testimonials_rowLast_quote, array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+  $wp_customize->add_control($student_testimonials_rowLast_quote, array(
+    'label' => 'Student Testimonials Last Row Quote',
+    'description' => 'Last student under "Student Testimonials section"',
+    'section' => $student_testimonials_section,
+    'type' => 'textarea'
+  ));
+  $wp_customize->add_setting($student_testimonials_rowLast_img, array(
+    'default' => '',
+    'transport' => 'refresh',
+    'section' => $student_testimonials_section,
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+  $wp_customize->add_control(new WP_Customize_Image_Control(
+    $wp_customize,
+    $student_testimonials_rowLast_img,
+    array(
+      'label' => __('Student Testimonials Last Row Image'),
+      'description' => esc_html__('Image underneath "Student Testimonials" in last row'),
+      'section' => $student_testimonials_section,
+      'button_labels' => array( // Optional.
+        'select' => __('Select Image'),
+        'change' => __('Change Image'),
+        'remove' => __('Remove'),
+        'default' => __('Default'),
+        'placeholder' => __('No image selected'),
+        'frame_title' => __('Select Image'),
+        'frame_button' => __('Choose Image'),
+      )
+    )
+  ));
 }
 add_action('customize_register', 'current_students_repeatable_customizer');
 
