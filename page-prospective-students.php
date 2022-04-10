@@ -42,8 +42,7 @@ require get_template_directory() . '/inc/section_vars.php';
           <br>
           <p class="prospective-student-p"><strong>Description: </strong><?php echo $f['description'] ?></p>
           <br>
-          <p class="prospective-student-p"><strong>Time: <?php echo $f['time'] ?></strong>
-            1500 hours</p>
+          <p class="prospective-student-p"><strong>Time: <?php echo $f['time'] ?></strong></p>
           <br>
           <p class="prospective-student-p"><strong>Additional Requirements:</strong>
           <p class="prospective-student-p"><?php echo $f['requirements'] ?></p>

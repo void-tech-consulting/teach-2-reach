@@ -741,7 +741,7 @@ function prospective_students_customizer($wp_customize)
       $prospective_students_repeater,
       array(
         'label'     => esc_html__('Programs'),
-        'description'   => 'Add more programs here',
+        'description'   => 'Add your programs here',
         'section'       => $prospective_students_section,
         'live_title_id' => 'program_title',
         'title_format'  => esc_html__('[live_title]'), // [live_title]
