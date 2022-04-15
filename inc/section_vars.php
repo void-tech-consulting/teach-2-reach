@@ -61,4 +61,7 @@
   $student_testimonials_rowLast_name = 'student_testimonials_rowLast_name';
   $student_testimonials_rowLast_quote = 'student_testimonials_rowLast_quote';
   $student_testimonials_rowLast_img = 'student_testimonials_rowLast_img';
+
+  $site_links_section = 'site_links_section';
+  $site_links_about_us = 'site_links_about_us';
 ?>

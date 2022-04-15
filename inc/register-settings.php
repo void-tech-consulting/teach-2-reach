@@ -590,11 +590,22 @@ function index_customizer($wp_customize)
     'transport' => 'refresh',
     'sanitize_callback' => 'absint'
   ));
-  $wp_customize->add_control($index_video, array(
-    'label' => 'Video Link',
+  $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, $index_video,
+    array(
+    'label' => __( 'Video' ),
+    'description' => esc_html__( 'Main image of the home page' ),
     'section' => $index_bottom_section,
-    'type' => 'textarea'
-  ));
+    'mime_type' => 'video',
+    'button_labels' => array( // Optional.
+        'select' => __( 'Select Video' ),
+        'change' => __( 'Change Video' ),
+        'remove' => __( 'Remove' ),
+        'default' => __( 'Default' ),
+        'placeholder' => __( 'No video selected' ),
+        'frame_title' => __( 'Select Video' ),
+        'frame_button' => __( 'Choose Video' ),
+    )
+  )));
 
   $wp_customize->selective_refresh->add_partial($index_bottom_text, array(
     'selector' => 'span#index_bottom_text', // You can also select a css class
@@ -881,8 +892,25 @@ function donate_customizer($wp_customize)
   ));
 }
 
+function site_links_customizer($wp_customize)
+{
+  require 'section_vars.php';
+  $wp_customize->add_section($site_links_section, array(
+    'title' => 'Site Links Section',
+  ));
+
+  $wp_customize->add_setting($site_links_about_us, array(
+    'default' => '/about-us'
+  ));
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, $site_links_about_us, array(
+    'label' => 'About Us Page',
+    'section' => $site_links_section,
+    'settings' => $site_links_about_us
+  )));
+}
 
 add_action('customize_register', 'prospective_students_customizer');
 add_action('customize_register', 'donate_customizer');
 add_action('customize_register', 'index_customizer');
 add_action('customize_register', 'about_us_customizer');
+add_action('customize_register', 'site_links_customizer');

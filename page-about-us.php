@@ -4,7 +4,7 @@
 ?>
 
 <div class="header-section">
-  <img class="header-picture" src="<?php echo get_template_directory_uri();?>/imgs/about-us-header-picture.png" alt="">
+  <img class="header-picture" src="<?php echo get_template_directory_uri();?>/imgs/bg_1.jpg" alt="">
   <div class="header-text">About Us</div>
 </div>
 <div class="header-section-mobile">
