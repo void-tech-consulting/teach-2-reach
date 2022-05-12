@@ -7,3 +7,4 @@ require get_template_directory() . '/inc/register-settings.php';
 // Don't worry about these for now...
 require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/template_functions.php';
+add_image_size( 'album-grid', 225, 150, true );

@@ -33,7 +33,7 @@
   </div>  
 
   <div class = "picture" >
-    <div class="middle_picture" style="background: url(<?php echo get_theme_mod($about_us_middle1_picture) ?>); background-repeat: no-repeat; background-size: cover;"> </div>
+    <div class="who_we_are_img" style="background: url(<?php echo get_theme_mod($about_us_middle1_picture) ?>); background-repeat: no-repeat; background-size: cover;"> </div>
     </div> 
   </div>
 </div>
@@ -43,13 +43,13 @@
 
 <div class = "goals" > 
 
-  <div class="middle_picture" style="background: url(<?php echo get_theme_mod($about_us_middle2_picture1) ?>); background-repeat: no-repeat; background-size: cover;"> </div>
+  <div class="middle_picture who_we_are_small_img" style="background: url(<?php echo get_theme_mod($about_us_middle2_picture1) ?>); background-repeat: no-repeat; background-size: cover;"> </div>
 
   <h1 class = "creative" > Be Creative <br> <br> <br> Learn New Skills <br> <br> <br> Treat Yourself <br> <br> <br> Make New Friends </h1> 
 
 
 
-  <div class="middle_picture" style="background: url(<?php echo get_theme_mod($about_us_middle2_picture2) ?>); background-repeat: no-repeat; background-size: cover;"> </div>
+  <div class="middle_picture who_we_are_small_img" style="background: url(<?php echo get_theme_mod($about_us_middle2_picture2) ?>); background-repeat: no-repeat; background-size: cover;"> </div>
 
 
 

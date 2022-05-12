@@ -32,6 +32,8 @@ html {
   font-size: 62.5%;
 }
 
+.album-grid{width: 225px; height: 150px; float: left; list-style: none; list-style-type: none; margin: 0 18px 30px 0px;}
+
 /* Remove default padding */
 
 ul[class],
@@ -787,10 +789,10 @@ a:not([footer-list]) {
 }
 
 .text {
-  padding-top: 42px;
-  padding-left: 199px;
-  padding-right: 199px;
-  padding-bottom: 4rem;
+  padding-top: 2rem;
+  padding-left: 12rem;
+  padding-right: 12rem;
+  padding-bottom: 2rem;
 }
 
 .orange_text_one {
@@ -799,7 +801,7 @@ a:not([footer-list]) {
 
 
 .who_we_are {
-  padding-right: 10rem;
+  padding-right: 8rem;
 
   display: flex;
 
@@ -810,8 +812,8 @@ a:not([footer-list]) {
   color: white;
   font-size: 2.5rem;
   font-weight: normal;
-  padding-top: 5rem;
-  padding-bottom: 9rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 
 }
 
@@ -823,10 +825,10 @@ a:not([footer-list]) {
   font-size: 2.5rem;
 }
 
-.who_are_we_img {
+.who_we_are_img {
   padding-top: 6rem;
-  width: 250rem;
-  height: auto;
+  width: 40rem;
+  height: 30rem;
 }
 
 .middle_picture{
@@ -871,7 +873,7 @@ a:not([footer-list]) {
   padding-left: 10rem;
 }
 
-.promise {
+.promise {  
   font-size: 5.5rem;
   padding-bottom: 5rem;
   font-weight: bold;
@@ -937,9 +939,10 @@ a:not([footer-list]) {
   padding-right: 3rem;
   padding-left: 3rem;
   background-color: #212121;
-  top: 25%;
-  right: 33%;
-  left: 33%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* width: 50%; */
   position: absolute;
   border-color: var(--light-purple);
   border-width: 2px;
@@ -949,6 +952,8 @@ a:not([footer-list]) {
 
 .heading {
   font-size: 5rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 .paragraph {
@@ -967,16 +972,16 @@ a:not([footer-list]) {
 .middle-picture {
   max-width: 100%;
   display: block;
-  width: 32rem;
-  height: 24rem;
+  width: 28rem;
+  height: 19rem;
 }
 
-.words {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+.index-words {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   color: black;
   background-color: #FF9A4A;
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-decoration: underline;
   font-weight: bold;
   display: flex;
@@ -1009,12 +1014,115 @@ a:not([footer-list]) {
   justify-content: space-evenly; 
 }
 
+.index-video-frame{
+  height: 35rem;
+  width: auto;
+}
+
+
+
 .difference {
   
   
 }
 
 /* responsive */
+
+/*responsive index*/
+
+@media (max-width: 500px){
+  .heading {
+    font-size: 4.5rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  .paragraph {
+    font-size: 2rem;
+  }
+
+  .welcome-text{
+    padding-bottom: 3rem;
+  }
+}
+
+@media (max-width: 600px){
+  .images{
+    display: flex;
+    flex-direction: column;
+
+  }
+  .middle-picture{
+    width: 38rem;
+    height: 26rem;
+  }
+  .index-picture-section{
+    padding-bottom: 2rem;
+  }
+  .index-words{
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 950px){
+  .index-video-frame{
+    height: 30rem;
+  }
+}
+
+@media (max-width: 790px){
+  .index-video-frame{
+    /* margin-bottom: 3rem; */
+    height: 25rem;
+  }
+  /* .video{
+    display: flex;
+    flex-direction: column;
+  } */
+}
+
+@media (max-width: 768px){
+  .index-video-frame{
+    margin-bottom: 3rem;
+    height: 35rem;
+  }
+  .video{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/*responsive index end*/
+/*responsive about us start */
+@media (max-width: 1000px){
+  .text{
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+}
+@media (max-width: 768px){
+  .text{
+    padding-left: 12rem;
+    padding-right: 12rem;
+    text-align: center;
+  }
+  .who_we_are {
+    flex-direction: column;
+    padding-right: 0;
+    padding-top: 1rem;
+    padding-bottom: 4rem;
+  }
+  .who_are_we_img {
+    width: 60rem;
+    height: 40rem;
+  }
+}
+@media (max-width: 500px){
+  .who_we_are_small_img{
+    display: none;
+  }
+}
+/*responsive about us end */
+
 @media (max-width: 1080px){
   html{
     font-size: 50%;
@@ -1078,7 +1186,7 @@ a:not([footer-list]) {
 /* NavBar */
 @media (max-width: 1400px){
   .sub-menu{
-    top: 9.5rem;
+    top: 11rem;
   }
 }
 @media (max-width: 1080px){
@@ -1163,12 +1271,12 @@ a:not([footer-list]) {
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
-  .donate-body{
+  /* .donate-body{
     display: block;
-  }
+  } */
   .donate-left{
     width: 100%;
-
+    display: none;
   }
 }
 /*
